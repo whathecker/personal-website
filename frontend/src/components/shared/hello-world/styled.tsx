@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 //import { device } from '../../../utils';
 
-export const StyledButton = styled.button`
-  width: 100%;
+export const StyledDiv = styled.div`
+  margin: 0 auto;
+  width: 300px;
   height: 55px;
   color: blue;
-  cursor: pointer;
   border: 1px solid black;
 `;
