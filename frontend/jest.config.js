@@ -21,6 +21,7 @@ module.exports = {
       "enzyme.js"
     ],
     setupFilesAfterEnv: ["<rootDir>/enzyme.js"],
+    snapshotSerializers: ["enzyme-to-json/serializer"],
     coverageReporters: [
       "json",
       "lcov",

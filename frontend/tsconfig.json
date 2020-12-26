@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "route.js"  ],
   "exclude": [
     "node_modules"
   ]

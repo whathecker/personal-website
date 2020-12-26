@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Header component should renders correctly 1`] = `
+<styled__StyledHeader>
+  <styled__StyledLogoWrapper>
+    Add Logo
+  </styled__StyledLogoWrapper>
+  <styled__StyledMenuWrapper>
+    <DesktopMenus
+      menus={
+        Array [
+          Object {
+            "title": "Home",
+            "url": "/",
+          },
+          Object {
+            "title": "Reading list",
+            "url": "/reading-list",
+          },
+          Object {
+            "title": "Contact",
+            "url": "/contact",
+          },
+        ]
+      }
+    />
+    <MobileMenus
+      menus={
+        Array [
+          Object {
+            "title": "Home",
+            "url": "/",
+          },
+          Object {
+            "title": "Reading list",
+            "url": "/reading-list",
+          },
+          Object {
+            "title": "Contact",
+            "url": "/contact",
+          },
+        ]
+      }
+    />
+  </styled__StyledMenuWrapper>
+</styled__StyledHeader>
+`;
