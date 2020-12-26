@@ -21,7 +21,7 @@ const props: MenuProps = {
 };
 
 describe('Test DesktopMenus component', () => {
-  test('DesktopMenus component renders correctly', () => {
+  it('should renders correctly', () => {
     const tree = shallow(<DesktopMenus menus={props.menus} />);
     console.log(tree);
     expect(tree).toMatchSnapshot();

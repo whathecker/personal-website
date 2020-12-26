@@ -21,9 +21,13 @@ const props: MenuProps = {
 };
 
 describe('Test MobileMenus component', () => {
-  test('MobileMenus component renders correctly', () => {
+  it('should renders correctly', () => {
     const tree = shallow(<MobileMenus menus={props.menus} />);
 
     expect(tree).toMatchSnapshot();
+  });
+
+  it('should renders drawer when icon is clicked', () => {
+    // add test here
   });
 });

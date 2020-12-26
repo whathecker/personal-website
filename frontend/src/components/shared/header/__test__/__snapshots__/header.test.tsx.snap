@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test Header component Header component renders correctly 1`] = `
+exports[`Test Header component should renders correctly 1`] = `
 <styled__StyledHeader>
   <styled__StyledLogoWrapper>
     Add Logo
