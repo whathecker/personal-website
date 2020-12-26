@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test DesktopMenus component DesktopMenus component renders correctly 1`] = `
+<Fragment>
+  <styled__DesktopMenusWrapper>
+    <styled__StyledMenuItem
+      href="/"
+      key="0"
+    >
+      Home
+    </styled__StyledMenuItem>
+    <styled__StyledMenuItem
+      href="/reading-list"
+      key="1"
+    >
+      Reading list
+    </styled__StyledMenuItem>
+    <styled__StyledMenuItem
+      href="/contact"
+      key="2"
+    >
+      Contact
+    </styled__StyledMenuItem>
+  </styled__DesktopMenusWrapper>
+</Fragment>
+`;

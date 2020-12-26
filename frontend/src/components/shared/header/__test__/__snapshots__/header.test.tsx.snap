@@ -1,3 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test Header component Header component renders correctly 1`] = `ShallowWrapper {}`;
+exports[`Test Header component Header component renders correctly 1`] = `
+<styled__StyledHeader>
+  <styled__StyledLogoWrapper>
+    Add Logo
+  </styled__StyledLogoWrapper>
+  <styled__StyledMenuWrapper>
+    <DesktopMenus
+      menus={
+        Array [
+          Object {
+            "title": "Home",
+            "url": "/",
+          },
+          Object {
+            "title": "Reading list",
+            "url": "/reading-list",
+          },
+          Object {
+            "title": "Contact",
+            "url": "/contact",
+          },
+        ]
+      }
+    />
+    <styled__MobileMenus>
+      <styled__MobileMenuIcon
+        onClick={[Function]}
+        src="/svg/menu.svg"
+      />
+      <WithStyles(ForwardRef(Drawer))
+        anchor="top"
+        onClose={[Function]}
+        open={false}
+      >
+        <styled__StyledMenuItem>
+          Home
+        </styled__StyledMenuItem>
+        <styled__StyledMenuItem>
+          Reading list
+        </styled__StyledMenuItem>
+        <styled__StyledMenuItem>
+          Contact
+        </styled__StyledMenuItem>
+      </WithStyles(ForwardRef(Drawer))>
+    </styled__MobileMenus>
+  </styled__StyledMenuWrapper>
+</styled__StyledHeader>
+`;

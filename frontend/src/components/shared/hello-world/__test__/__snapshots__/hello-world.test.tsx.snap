@@ -1,3 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot testing of HelloWorld component renders correctly 1`] = `ShallowWrapper {}`;
+exports[`Snapshot testing of HelloWorld component renders correctly 1`] = `
+<styled__StyledDiv>
+  Hello World!
+</styled__StyledDiv>
+`;
