@@ -28,7 +28,7 @@ describe('Test MobileMenus component', () => {
   });
 
   it('should renders correct number of menus', () => {
-    const wrapper = shallow(<MobileMenus menus={props.menus}/>);
+    const wrapper = shallow(<MobileMenus menus={props.menus} />);
 
     expect(wrapper.find('.mobile-menu')).toHaveLength(props.menus.length);
   });

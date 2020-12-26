@@ -13,8 +13,6 @@ const MobileMenus: React.FunctionComponent<MenuProps> = ({ menus }: MenuProps) =
       return;
     }
 
-    console.log(event);
-
     setDrawerOpen(open);
   };
 
