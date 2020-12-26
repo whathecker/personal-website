@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test MobileMenus component MobileMenus component renders correctly 1`] = `
+<Fragment>
+  <styled__MobileMenusWrapper>
+    <styled__MobileMenuLink
+      onClick={[Function]}
+    >
+      <styled__MobileMenuIcon
+        src="/svg/menu.svg"
+      />
+    </styled__MobileMenuLink>
+    <WithStyles(ForwardRef(Drawer))
+      anchor="top"
+      onClose={[Function]}
+      open={false}
+    >
+      <styled__StyledMobileMenuItem
+        href="/"
+        key="0"
+      >
+        Home
+      </styled__StyledMobileMenuItem>
+      <styled__StyledMobileMenuItem
+        href="/reading-list"
+        key="1"
+      >
+        Reading list
+      </styled__StyledMobileMenuItem>
+      <styled__StyledMobileMenuItem
+        href="/contact"
+        key="2"
+      >
+        Contact
+      </styled__StyledMobileMenuItem>
+    </WithStyles(ForwardRef(Drawer))>
+  </styled__MobileMenusWrapper>
+</Fragment>
+`;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { device } from '../../../utils';
+//import { device } from '../../../utils';
 
 export const StyledHeader = styled.header`
   display: flex;
@@ -25,33 +25,4 @@ export const StyledMenuWrapper = styled.div`
   padding-left: 15px;
   padding-right: 15px;
   border: 1px solid black;
-`;
-
-export const DesktopMenus = styled.div`
-  display: none;
-
-  @media ${device.laptop} {
-    display: block;
-  } ;
-`;
-
-export const MobileMenus = styled.div`
-  display: block;
-
-  @media ${device.laptop} {
-    display: none;
-  } ;
-`;
-
-export const MobileMenuIcon = styled.img`
-  cursor: pointer;
-  width: 32px;
-  height: 32px;
-`;
-
-export const StyledMenuItem = styled.a`
-  cursor: pointer;
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: 1.1em;
 `;

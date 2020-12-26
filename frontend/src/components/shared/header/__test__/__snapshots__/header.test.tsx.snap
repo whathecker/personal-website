@@ -24,27 +24,24 @@ exports[`Test Header component Header component renders correctly 1`] = `
         ]
       }
     />
-    <styled__MobileMenus>
-      <styled__MobileMenuIcon
-        onClick={[Function]}
-        src="/svg/menu.svg"
-      />
-      <WithStyles(ForwardRef(Drawer))
-        anchor="top"
-        onClose={[Function]}
-        open={false}
-      >
-        <styled__StyledMenuItem>
-          Home
-        </styled__StyledMenuItem>
-        <styled__StyledMenuItem>
-          Reading list
-        </styled__StyledMenuItem>
-        <styled__StyledMenuItem>
-          Contact
-        </styled__StyledMenuItem>
-      </WithStyles(ForwardRef(Drawer))>
-    </styled__MobileMenus>
+    <MobileMenus
+      menus={
+        Array [
+          Object {
+            "title": "Home",
+            "url": "/",
+          },
+          Object {
+            "title": "Reading list",
+            "url": "/reading-list",
+          },
+          Object {
+            "title": "Contact",
+            "url": "/contact",
+          },
+        ]
+      }
+    />
   </styled__StyledMenuWrapper>
 </styled__StyledHeader>
 `;

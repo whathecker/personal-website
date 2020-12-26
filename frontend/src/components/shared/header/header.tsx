@@ -1,19 +1,9 @@
 import * as React from 'react';
-import {
-  StyledHeader,
-  StyledLogoWrapper,
-  StyledMenuWrapper,
-  MobileMenus,
-  MobileMenuIcon,
-  StyledMenuItem,
-} from './styled';
-import { DesktopMenus } from './components';
-import { Drawer } from '@material-ui/core';
+import { StyledHeader, StyledLogoWrapper, StyledMenuWrapper } from './styled';
+import { DesktopMenus, MobileMenus } from './components';
 import { MenuItem } from './types';
 
 const Header: React.FunctionComponent = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-
   const menus: MenuItem[] = [
     {
       title: 'Home',
@@ -29,18 +19,12 @@ const Header: React.FunctionComponent = () => {
     },
   ];
 
-  const toggleDrawer = (isDrawerOpen: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
-    if (
-      event.type === 'keydown' &&
-      ((event as React.KeyboardEvent).key === 'Tab' || (event as React.KeyboardEvent).key === 'Shift')
-    ) {
-      return;
-    }
-    setIsMobileMenuOpen(isDrawerOpen);
-  };
-
   const renderDesktopMenus = () => {
     return <DesktopMenus menus={menus} />;
+  };
+
+  const renderMobileMenus = () => {
+    return <MobileMenus menus={menus} />;
   };
 
   return (
@@ -48,14 +32,7 @@ const Header: React.FunctionComponent = () => {
       <StyledLogoWrapper>Add Logo</StyledLogoWrapper>
       <StyledMenuWrapper>
         {renderDesktopMenus()}
-        <MobileMenus>
-          <MobileMenuIcon onClick={toggleDrawer(true)} src="/svg/menu.svg" />
-          <Drawer anchor={'top'} open={isMobileMenuOpen} onClose={toggleDrawer(false)}>
-            <StyledMenuItem>Home</StyledMenuItem>
-            <StyledMenuItem>Reading list</StyledMenuItem>
-            <StyledMenuItem>Contact</StyledMenuItem>
-          </Drawer>
-        </MobileMenus>
+        {renderMobileMenus()}
       </StyledMenuWrapper>
     </StyledHeader>
   );
