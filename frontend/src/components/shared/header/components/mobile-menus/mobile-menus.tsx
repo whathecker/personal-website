@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { MobileMenusWrapper, MobileMenuLink, MobileMenuIcon, StyledMobileMenuItem } from './styled';
-import { Drawer } from '@material-ui/core';
+import { MobileMenusWrapper, MobileMenuLink, MobileMenuIcon, StyledMobileMenuItem, StyledDrawer } from './styled';
 import { MenuProps, MenuItem } from '../../types';
 
 const MobileMenus: React.FunctionComponent<MenuProps> = ({ menus }: MenuProps) => {
@@ -29,14 +28,14 @@ const MobileMenus: React.FunctionComponent<MenuProps> = ({ menus }: MenuProps) =
 
   return (
     <>
-      <MobileMenusWrapper>
-        <MobileMenuLink onClick={toggleDrawer(true)}>
-          <MobileMenuIcon src="/svg/menu.svg" />
-        </MobileMenuLink>
-        <Drawer anchor={'top'} open={drawerOpen} onClose={toggleDrawer(false)}>
-          {renderMenus(menus)}
-        </Drawer>
-      </MobileMenusWrapper>
+        <MobileMenusWrapper>
+            <MobileMenuLink onClick={toggleDrawer(true)}>
+                <MobileMenuIcon src="/svg/menu.svg" />
+            </MobileMenuLink>
+            <StyledDrawer anchor={'right'} open={drawerOpen} onClose={toggleDrawer(false)}>
+                {renderMenus(menus)}
+            </StyledDrawer>
+        </MobileMenusWrapper>  
     </>
   );
 };

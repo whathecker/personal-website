@@ -14,4 +14,6 @@ export const StyledMenuItem = styled.a`
   margin-left: 10px;
   margin-right: 10px;
   font-size: 1.1em;
+  color: black;
+  text-decoration: none;
 `;

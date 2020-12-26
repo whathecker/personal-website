@@ -10,8 +10,8 @@ exports[`Test MobileMenus component MobileMenus component renders correctly 1`] 
         src="/svg/menu.svg"
       />
     </styled__MobileMenuLink>
-    <WithStyles(ForwardRef(Drawer))
-      anchor="top"
+    <styled__StyledDrawer
+      anchor="right"
       onClose={[Function]}
       open={false}
     >
@@ -33,7 +33,7 @@ exports[`Test MobileMenus component MobileMenus component renders correctly 1`] 
       >
         Contact
       </styled__StyledMobileMenuItem>
-    </WithStyles(ForwardRef(Drawer))>
+    </styled__StyledDrawer>
   </styled__MobileMenusWrapper>
 </Fragment>
 `;

@@ -23,7 +23,7 @@ const props: MenuProps = {
 describe('Test MobileMenus component', () => {
   test('MobileMenus component renders correctly', () => {
     const tree = shallow(<MobileMenus menus={props.menus} />);
-    console.log(tree);
+   
     expect(tree).toMatchSnapshot();
   });
 });

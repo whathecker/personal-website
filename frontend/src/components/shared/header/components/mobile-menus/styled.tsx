@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { device } from '../../../../../utils';
+import { Drawer } from '@material-ui/core';
 
 export const MobileMenusWrapper = styled.div`
   display: block;
@@ -7,6 +8,12 @@ export const MobileMenusWrapper = styled.div`
   @media ${device.laptop} {
     display: none;
   } ;
+`;
+
+export const StyledDrawer = styled(Drawer)`
+    & .MuiDrawer-paper {
+        width: 260px;
+    }
 `;
 
 export const MobileMenuLink = styled.a`
@@ -23,5 +30,13 @@ export const MobileMenuIcon = styled.img`
 
 export const StyledMobileMenuItem = styled.a`
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1.2em;
+  color: black;
+  text-decoration: none;
+  margin-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  &:first-of-type {
+      margin-top: 50px;
+  }
 `;
