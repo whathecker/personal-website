@@ -5,7 +5,7 @@ export const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   width: 100%;
-  height: 120px;
+  height: 100px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding-left: 30px;
 `;
@@ -21,8 +21,7 @@ export const StyledMenuWrapper = styled.div`
   height: 60px;
   align-items: center;
   margin-left: auto;
-  margin-right: 60px;
+  margin-right: 50px;
   padding-left: 15px;
   padding-right: 15px;
-  border: 1px solid black;
 `;
