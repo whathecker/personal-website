@@ -6,7 +6,7 @@ const DesktopMenus: React.FunctionComponent<MenuProps> = ({ menus }: MenuProps) 
   const renderMenus = (menus: MenuItem[]) => {
     return menus.map((menu, index) => {
       return (
-        <StyledMenuItem key={index} href={menu.url}>
+        <StyledMenuItem key={index} href={menu.url} className="desktop-menu">
           {menu.title}
         </StyledMenuItem>
       );

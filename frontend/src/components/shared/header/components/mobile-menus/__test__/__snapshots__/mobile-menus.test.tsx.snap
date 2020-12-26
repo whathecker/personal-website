@@ -16,18 +16,21 @@ exports[`Test MobileMenus component should renders correctly 1`] = `
       open={false}
     >
       <styled__StyledMobileMenuItem
+        className="mobile-menu"
         href="/"
         key="0"
       >
         Home
       </styled__StyledMobileMenuItem>
       <styled__StyledMobileMenuItem
+        className="mobile-menu"
         href="/reading-list"
         key="1"
       >
         Reading list
       </styled__StyledMobileMenuItem>
       <styled__StyledMobileMenuItem
+        className="mobile-menu"
         href="/contact"
         key="2"
       >

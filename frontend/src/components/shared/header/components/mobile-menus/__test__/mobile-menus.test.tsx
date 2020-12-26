@@ -27,7 +27,9 @@ describe('Test MobileMenus component', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('should renders drawer when icon is clicked', () => {
-    // add test here
+  it('should renders correct number of menus', () => {
+    const wrapper = shallow(<MobileMenus menus={props.menus}/>);
+
+    expect(wrapper.find('.mobile-menu')).toHaveLength(props.menus.length);
   });
 });

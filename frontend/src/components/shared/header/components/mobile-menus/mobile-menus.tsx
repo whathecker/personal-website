@@ -13,13 +13,15 @@ const MobileMenus: React.FunctionComponent<MenuProps> = ({ menus }: MenuProps) =
       return;
     }
 
+    console.log(event);
+
     setDrawerOpen(open);
   };
 
   const renderMenus = (menus: MenuItem[]) => {
     return menus.map((menu, index) => {
       return (
-        <StyledMobileMenuItem key={index} href={menu.url}>
+        <StyledMobileMenuItem key={index} href={menu.url} className="mobile-menu">
           {menu.title}
         </StyledMobileMenuItem>
       );
