@@ -1,9 +1,10 @@
 import React from 'react';
-import { HelloWorld } from '../components/shared';
+import { HelloWorld, Header } from '../components/shared';
 
 const Homepage: React.FunctionComponent = () => {
   return (
     <>
+      <Header />
       <HelloWorld />
     </>
   );
