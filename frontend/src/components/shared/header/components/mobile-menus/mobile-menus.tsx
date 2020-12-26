@@ -28,14 +28,14 @@ const MobileMenus: React.FunctionComponent<MenuProps> = ({ menus }: MenuProps) =
 
   return (
     <>
-        <MobileMenusWrapper>
-            <MobileMenuLink onClick={toggleDrawer(true)}>
-                <MobileMenuIcon src="/svg/menu.svg" />
-            </MobileMenuLink>
-            <StyledDrawer anchor={'right'} open={drawerOpen} onClose={toggleDrawer(false)}>
-                {renderMenus(menus)}
-            </StyledDrawer>
-        </MobileMenusWrapper>  
+      <MobileMenusWrapper>
+        <MobileMenuLink onClick={toggleDrawer(true)}>
+          <MobileMenuIcon src="/svg/menu.svg" />
+        </MobileMenuLink>
+        <StyledDrawer anchor={'right'} open={drawerOpen} onClose={toggleDrawer(false)}>
+          {renderMenus(menus)}
+        </StyledDrawer>
+      </MobileMenusWrapper>
     </>
   );
 };

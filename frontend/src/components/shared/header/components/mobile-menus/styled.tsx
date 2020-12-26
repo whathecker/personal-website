@@ -11,9 +11,9 @@ export const MobileMenusWrapper = styled.div`
 `;
 
 export const StyledDrawer = styled(Drawer)`
-    & .MuiDrawer-paper {
-        width: 260px;
-    }
+  & .MuiDrawer-paper {
+    width: 260px;
+  }
 `;
 
 export const MobileMenuLink = styled.a`
@@ -37,6 +37,6 @@ export const StyledMobileMenuItem = styled.a`
   padding-top: 15px;
   padding-bottom: 10px;
   &:first-of-type {
-      margin-top: 50px;
+    margin-top: 50px;
   }
 `;
