@@ -3,7 +3,10 @@
 exports[`Test ReadingList component should renders correctly 1`] = `
 <Fragment>
   <styled__ReadlingListHeaderSection>
-    ReadingListHeader
+    <ReadingListHeader
+      bodyText="Here is a body text"
+      headerText="Reading List"
+    />
   </styled__ReadlingListHeaderSection>
   <styled__ActiveReadsSection>
     ActiveReads
