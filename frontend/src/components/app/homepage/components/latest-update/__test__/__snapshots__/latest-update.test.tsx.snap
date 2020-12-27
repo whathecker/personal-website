@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test LatestUpdate component should renders correctly 1`] = `
+<Fragment>
+  <styled__CurrentlyReadingSection>
+    Currently reading
+  </styled__CurrentlyReadingSection>
+</Fragment>
+`;

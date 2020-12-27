@@ -1,10 +1,10 @@
 import * as React from 'react';
-import Intro from '../intro';
+import LatestUpdate from '../latest-update';
 import { shallow } from 'enzyme';
 
-describe('Test Intro component', () => {
+describe('Test LatestUpdate component', () => {
   it('should renders correctly', () => {
-    const tree = shallow(<Intro />);
+    const tree = shallow(<LatestUpdate />);
     expect(tree).toMatchSnapshot();
   });
 });
