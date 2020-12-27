@@ -2,6 +2,32 @@
 
 exports[`Test SocialProfile component should renders correctly 1`] = `
 <styled__StyledSocialProfileBackground>
-  Social Profile
+  <styled__SocialLink
+    className="social-link"
+    href="https://github.com/chok-chok"
+    target="_blank"
+  >
+    <styled__SocialIcon
+      src="/svg/github.svg"
+    />
+  </styled__SocialLink>
+  <styled__SocialLink
+    className="social-link"
+    href="https://www.linkedin.com/in/yunjae-oh-223683a6/"
+    target="_blank"
+  >
+    <styled__SocialIcon
+      src="/svg/linkedin.svg"
+    />
+  </styled__SocialLink>
+  <styled__SocialLink
+    className="social-link"
+    href="mailto:yunjae.oh.nl@gmail.com"
+    target="_blank"
+  >
+    <styled__SocialIcon
+      src="/svg/email.svg"
+    />
+  </styled__SocialLink>
 </styled__StyledSocialProfileBackground>
 `;
