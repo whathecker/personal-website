@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Homepage component should renders correctly 1`] = `
+<styled__HomepageAreaBackground>
+  <styled__HomepageIntroSectionWrapper>
+    <Intro />
+  </styled__HomepageIntroSectionWrapper>
+  <styled__HomepageUpdateSectionWrapper>
+    <LatestUpdate />
+  </styled__HomepageUpdateSectionWrapper>
+</styled__HomepageAreaBackground>
+`;

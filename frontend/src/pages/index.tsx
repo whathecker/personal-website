@@ -1,11 +1,12 @@
 import React from 'react';
-import { HelloWorld, Header, Footer } from '../components/shared';
+import { Header, Footer } from '../components/shared';
+import { HomepageArea } from '../components/app/homepage';
 
 const Homepage: React.FunctionComponent = () => {
   return (
     <>
       <Header />
-      <HelloWorld />
+      <HomepageArea />
       <Footer />
     </>
   );
