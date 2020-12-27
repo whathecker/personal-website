@@ -2,6 +2,8 @@ import styled from 'styled-components';
 //import { device } from '../../../utils';
 
 export const StyledFooter = styled.footer`
+  display: flex;
+  align-items: center;
   position: fixed;
   left: 0;
   bottom: 0;
