@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test ReadingList component should renders correctly 1`] = `
+<Fragment>
+  <styled__ReadlingListHeaderSection>
+    ReadingListHeader
+  </styled__ReadlingListHeaderSection>
+  <styled__ActiveReadsSection>
+    ActiveReads
+  </styled__ActiveReadsSection>
+  <styled__ReadsHistorySection>
+    ReadsHistory
+  </styled__ReadsHistorySection>
+</Fragment>
+`;

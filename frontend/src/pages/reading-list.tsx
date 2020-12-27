@@ -1,13 +1,15 @@
 import * as React from 'react';
 import { Header, Footer } from '../components/shared';
+import { ReadingList } from '../components/app/reading-list';
 
-const ReadingList: React.FunctionComponent = () => {
+const ReadingListPage: React.FunctionComponent = () => {
   return (
     <>
       <Header />
+      <ReadingList />
       <Footer />
     </>
   );
 };
 
-export default ReadingList;
+export default ReadingListPage;
