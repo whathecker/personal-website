@@ -3,7 +3,29 @@
 exports[`Test LatestUpdate component should renders correctly 1`] = `
 <Fragment>
   <styled__CurrentlyReadingSection>
-    Currently reading
+    <styled__HeaderWrapper>
+      <styled__CurrentlyReadingHeader>
+        Currently Reading
+      </styled__CurrentlyReadingHeader>
+      <styled__CurrentlyReadingLink>
+        checkout my reading list
+      </styled__CurrentlyReadingLink>
+    </styled__HeaderWrapper>
+    <styled__BookWrapper>
+      <styled__BookImgWrapper>
+        <styled__BookImg
+          src="/img/example-book-img.jpg"
+        />
+      </styled__BookImgWrapper>
+      <styled__BookDetailWrapper>
+        <styled__BookTitle>
+          Domain Driven Design: Tackling Complexity in the Heart of Software
+        </styled__BookTitle>
+        <styled__AuthorInfo>
+          by Eric Evans
+        </styled__AuthorInfo>
+      </styled__BookDetailWrapper>
+    </styled__BookWrapper>
   </styled__CurrentlyReadingSection>
 </Fragment>
 `;
