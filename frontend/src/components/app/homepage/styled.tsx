@@ -20,6 +20,7 @@ export const HomepageIntroSectionWrapper = styled.div`
 
   @media ${device.laptop} {
     display: inline-block;
+    vertical-align: top;
     width: 30%;
     height: 100%;
     margin-right: 1%;
