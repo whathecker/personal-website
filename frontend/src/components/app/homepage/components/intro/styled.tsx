@@ -16,6 +16,7 @@ export const IntroImageWrapper = styled.div`
 export const IntroImage = styled.img`
   width: 100%;
   height: 100%;
+  border-radius: 230px;
 `;
 
 export const IntroHeaderText = styled.h2`
