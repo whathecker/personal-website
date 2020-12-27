@@ -2,10 +2,18 @@ import styled from 'styled-components';
 import { device } from '../../../../../../../utils';
 
 export const CurrentlyReadingSection = styled.div`
-  width: 80%;
+  width: 98%;
   height: auto;
   margin: 0 auto;
   padding-top: 15px;
+
+  @media ${device.mobileM} {
+    width: 95%;
+  }
+
+  @media ${device.tablet} {
+    width: 80%;
+  }
 
   @media ${device.laptop} {
     width: 100%;
