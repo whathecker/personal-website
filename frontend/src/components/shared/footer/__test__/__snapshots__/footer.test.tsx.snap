@@ -2,6 +2,6 @@
 
 exports[`Test Footer component should renders correctly 1`] = `
 <styled__StyledFooter>
-  This is a Footer
+  <SocialProfile />
 </styled__StyledFooter>
 `;

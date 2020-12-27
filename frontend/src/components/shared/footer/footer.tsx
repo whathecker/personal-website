@@ -1,8 +1,13 @@
 import * as React from 'react';
 import { StyledFooter } from './styled';
+import { SocialProfile } from './components';
 
 const Footer: React.FunctionComponent = () => {
-  return <StyledFooter>This is a Footer</StyledFooter>;
+  return (
+    <StyledFooter>
+      <SocialProfile />
+    </StyledFooter>
+  );
 };
 
 export default Footer;
