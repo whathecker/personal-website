@@ -5,6 +5,8 @@ exports[`Test Homepage component should renders correctly 1`] = `
   <styled__HomepageIntroSectionWrapper>
     <Intro />
   </styled__HomepageIntroSectionWrapper>
-  <styled__HomepageUpdateSectionWrapper />
+  <styled__HomepageUpdateSectionWrapper>
+    <LatestUpdate />
+  </styled__HomepageUpdateSectionWrapper>
 </styled__HomepageAreaBackground>
 `;
