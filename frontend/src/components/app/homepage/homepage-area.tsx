@@ -1,8 +1,13 @@
 import * as React from 'react';
-import { HomepageBackground } from './styled';
+import { HomepageAreaBackground, HomepageIntroSectionWrapper, HomepageUpdateSectionWrapper } from './styled';
 
 const Homepage: React.FunctionComponent = () => {
-  return <HomepageBackground>Here is the homepage</HomepageBackground>;
+  return (
+    <HomepageAreaBackground>
+      <HomepageIntroSectionWrapper></HomepageIntroSectionWrapper>
+      <HomepageUpdateSectionWrapper></HomepageUpdateSectionWrapper>
+    </HomepageAreaBackground>
+  );
 };
 
 export default Homepage;

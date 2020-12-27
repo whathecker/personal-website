@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test Homepage component should renders correctly 1`] = `
-<styled__HomepageBackground>
-  Here is the homepage
-</styled__HomepageBackground>
+<styled__HomepageAreaBackground>
+  <styled__HomepageIntroSectionWrapper />
+  <styled__HomepageUpdateSectionWrapper />
+</styled__HomepageAreaBackground>
 `;
