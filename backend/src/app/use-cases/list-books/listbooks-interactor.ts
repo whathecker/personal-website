@@ -1,18 +1,27 @@
+import { IAppErrorFactory } from '../../domain/definition/errors/app-error-factory';
 import { IInteractor } from '../../domain/definition/interactor';
-//import { IAppErrorFactory } from '../../domain/definition/errors/app-error-factory';
-//import { ErrorType } from '../../domain/definition/errors/error-type';
+import { ErrorType } from '../../domain/definition/errors/error-type';
 
-//import { Book } from '../../domain/entity/book';
-
-import { IListBooksOutput } from './interfaces';
+import { IListBooksRepository, IListBooksOutput, IFetchBooksResult } from './interfaces';
 
 export class ListBookInteractor implements IInteractor {
+  constructor(private listBooksRepository: IListBooksRepository, private errorFactory: IAppErrorFactory) {}
+
   async execute(): Promise<IListBooksOutput> {
-    // fetch all books from repository
+    try {
+      const listBooksResult: IFetchBooksResult = await this.listBooksRepository.fetchBooks();
 
-    // validate books?
+      if (listBooksResult.status === 'FETCH_BOOK_SUCCESS') {
+        throw this.errorFactory.getError(ErrorType.fetchBooks, listBooksResult.errorData);
+      }
 
-    // return as list output
-    return Promise.resolve({});
+      const output: IListBooksOutput = {
+        books: listBooksResult.books,
+      };
+
+      return Promise.resolve(output);
+    } catch (error) {
+      throw this.errorFactory.getError(ErrorType.listBooks, error);
+    }
   }
 }
