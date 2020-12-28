@@ -58,10 +58,18 @@ export const AuthorInfo = styled.p`
 `;
 
 export const RatingSection = styled.div`
-  font-size: 0.8em;
   padding-left: 2.5px;
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+`;
+
+export const RatingSubheader = styled.p`
+  display: inline-block;
+  font-size: 0.8em;
+`;
+
+export const RatingStarSection = styled.div`
+  display: inline-block;
 `;
 
 export const ReadDate = styled.p`
