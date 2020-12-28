@@ -7,6 +7,8 @@ export const StyledH2 = styled.h2`
 `;
 
 export const FinishedBookWrapper = styled.div`
-  padding-top: 15px;
-  padding-bottom: 15px;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 30px;
 `;

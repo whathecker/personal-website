@@ -6,7 +6,9 @@ exports[`Test ReadsHistory component should renders correctly 1`] = `
     What I have read
   </styled__StyledH2>
   <styled__FinishedBookWrapper>
-    Add Finihsed Book here
+    <FinishedBook />
+    <FinishedBook />
+    <FinishedBook />
   </styled__FinishedBookWrapper>
 </Fragment>
 `;
