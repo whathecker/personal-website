@@ -12,7 +12,7 @@ exports[`Test ReadingList component should renders correctly 1`] = `
     <ActiveReads />
   </styled__ActiveReadsSection>
   <styled__ReadsHistorySection>
-    ReadsHistory
+    <ReadsHistory />
   </styled__ReadsHistorySection>
 </Fragment>
 `;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ReadlingListHeaderSection, ActiveReadsSection, ReadsHistorySection } from './styled';
-import { ReadingListHeader, ActiveReads } from './components';
+import { ReadingListHeader, ActiveReads, ReadsHistory } from './components';
 
 const ReadingList: React.FunctionComponent = () => {
   return (
@@ -14,7 +14,9 @@ const ReadingList: React.FunctionComponent = () => {
       <ActiveReadsSection>
         <ActiveReads />
       </ActiveReadsSection>
-      <ReadsHistorySection>ReadsHistory</ReadsHistorySection>
+      <ReadsHistorySection>
+        <ReadsHistory />
+      </ReadsHistorySection>
     </>
   );
 };
