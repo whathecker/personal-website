@@ -3,7 +3,7 @@ import { IEntity } from './entity';
 
 export enum ReadStatus {
   reading = 'READING',
-  finished = 'FINISHED'
+  finished = 'FINISHED',
 }
 
 export class Book implements IEntity {
