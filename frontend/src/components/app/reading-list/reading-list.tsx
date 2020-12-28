@@ -6,7 +6,10 @@ const ReadingList: React.FunctionComponent = () => {
   return (
     <>
       <ReadlingListHeaderSection>
-        <ReadingListHeader headerText="Reading List" bodyText="Here is a body text" />
+        <ReadingListHeader
+          headerText="Reading List"
+          bodyText="I love to read about various of topics. here are some selection of books which I’d like to share my rating and reviews"
+        />
       </ReadlingListHeaderSection>
       <ActiveReadsSection>ActiveReads</ActiveReadsSection>
       <ReadsHistorySection>ReadsHistory</ReadsHistorySection>

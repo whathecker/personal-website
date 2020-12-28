@@ -4,7 +4,7 @@ exports[`Test ReadingList component should renders correctly 1`] = `
 <Fragment>
   <styled__ReadlingListHeaderSection>
     <ReadingListHeader
-      bodyText="Here is a body text"
+      bodyText="I love to read about various of topics. here are some selection of books which I’d like to share my rating and reviews"
       headerText="Reading List"
     />
   </styled__ReadlingListHeaderSection>
