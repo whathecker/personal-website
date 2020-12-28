@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Rating component should renders correctly 1`] = `
+<Fragment>
+  <styled__RatingWrapper>
+    <styled__RatingStartImg
+      className="black-rate-star"
+      key="1"
+      src="/svg/star-black.svg"
+    />
+    <styled__RatingStartImg
+      className="black-rate-star"
+      key="2"
+      src="/svg/star-black.svg"
+    />
+    <styled__RatingStartImg
+      className="black-rate-star"
+      key="3"
+      src="/svg/star-black.svg"
+    />
+    <styled__RatingStartImg
+      className="black-rate-star"
+      key="4"
+      src="/svg/star-black.svg"
+    />
+    <styled__RatingStartImg
+      className="black-rate-star"
+      key="5"
+      src="/svg/star-black.svg"
+    />
+  </styled__RatingWrapper>
+</Fragment>
+`;

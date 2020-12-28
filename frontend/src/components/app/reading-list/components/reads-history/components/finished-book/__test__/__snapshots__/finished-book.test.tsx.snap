@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test FinishedBook component should renders correctly 1`] = `
+<styled__FinishedBookBackground>
+  <styled__FinishedBookImg
+    src="/img/example-book-img.jpg"
+  />
+  <styled__FinishedBookDetailWrapper>
+    <styled__FinishedBookLink
+      href="https://www.amazon.com"
+      target="_blank"
+    >
+      <styled__BookTitle>
+        Domain Driven Design: Tackling Complexity in the Heart of Software
+      </styled__BookTitle>
+    </styled__FinishedBookLink>
+    <styled__AuthorInfo>
+      by Eric Evans
+    </styled__AuthorInfo>
+    <styled__RatingSection>
+      <styled__RatingSubheader>
+        My Rating:
+      </styled__RatingSubheader>
+      <styled__RatingStarSection>
+        <Rating
+          rating={4}
+        />
+      </styled__RatingStarSection>
+    </styled__RatingSection>
+    <styled__ReadDate>
+      Read date: 2020.10
+    </styled__ReadDate>
+    <styled__MyReview>
+      Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. v Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book.
+    </styled__MyReview>
+  </styled__FinishedBookDetailWrapper>
+</styled__FinishedBookBackground>
+`;

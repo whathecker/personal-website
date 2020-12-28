@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test ReadsHistory component should renders correctly 1`] = `
+<Fragment>
+  <styled__StyledH2>
+    What I have read
+  </styled__StyledH2>
+  <styled__FinishedBookWrapper>
+    <FinishedBook />
+    <FinishedBook />
+    <FinishedBook />
+  </styled__FinishedBookWrapper>
+</Fragment>
+`;

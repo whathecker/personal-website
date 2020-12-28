@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test ReadingList component should renders correctly 1`] = `
+<Fragment>
+  <styled__ReadlingListHeaderSection>
+    <ReadingListHeader
+      bodyText="I love to read about various of topics. here are some selection of books which I’d like to share my rating and reviews"
+      headerText="Reading List"
+    />
+  </styled__ReadlingListHeaderSection>
+  <styled__ActiveReadsSection>
+    <styled__ActiveReadsInnerWrapper>
+      <ActiveReads />
+    </styled__ActiveReadsInnerWrapper>
+  </styled__ActiveReadsSection>
+  <styled__ReadsHistorySection>
+    <ReadsHistory />
+  </styled__ReadsHistorySection>
+</Fragment>
+`;

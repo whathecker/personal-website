@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test ReadingListHeader component should renders correctly 1`] = `
+<Fragment>
+  <styled__StyledH1>
+    Reading List
+  </styled__StyledH1>
+  <styled__StyledBodyText>
+    I love to read about various of topics. here are some selection of books which I’d like to share my rating and reviews
+  </styled__StyledBodyText>
+</Fragment>
+`;
