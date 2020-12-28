@@ -9,7 +9,7 @@ exports[`Test ReadingList component should renders correctly 1`] = `
     />
   </styled__ReadlingListHeaderSection>
   <styled__ActiveReadsSection>
-    ActiveReads
+    <ActiveReads />
   </styled__ActiveReadsSection>
   <styled__ReadsHistorySection>
     ReadsHistory

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test ActiveReads component should renders correctly 1`] = `
+<Fragment>
+  <styled__StyledH2>
+    Currently reading
+  </styled__StyledH2>
+  <styled__ActiveBookWrapper>
+    <styled__BookImg
+      src="/img/example-book-img.jpg"
+    />
+    <styled__BookDetailWrapper>
+      <styled__BookTitle>
+        Domain Driven Design: Tackling Complexity in the Heart of Software
+      </styled__BookTitle>
+      <styled__AuthorInfo>
+        by Eric Evans
+      </styled__AuthorInfo>
+    </styled__BookDetailWrapper>
+  </styled__ActiveBookWrapper>
+</Fragment>
+`;
