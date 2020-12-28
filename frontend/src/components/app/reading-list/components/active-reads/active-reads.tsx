@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyledH2, ActiveBookWrapper, BookImg, BookDetailWrapper, BookTitle, AuthorInfo } from './styled';
+import { StyledH2, ActiveBookWrapper, BookImg, BookDetailWrapper, BookLink, BookTitle, AuthorInfo } from './styled';
 
 const ActiveReads: React.FunctionComponent = () => {
   return (
@@ -8,7 +8,9 @@ const ActiveReads: React.FunctionComponent = () => {
       <ActiveBookWrapper>
         <BookImg src="/img/example-book-img.jpg" />
         <BookDetailWrapper>
-          <BookTitle>{`Domain Driven Design: Tackling Complexity in the Heart of Software`}</BookTitle>
+          <BookLink href="https://www.amazon.com" target="_blank">
+            <BookTitle>{`Domain Driven Design: Tackling Complexity in the Heart of Software`}</BookTitle>
+          </BookLink>
           <AuthorInfo>{`by Eric Evans`}</AuthorInfo>
         </BookDetailWrapper>
       </ActiveBookWrapper>

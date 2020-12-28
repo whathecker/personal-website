@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ReadlingListHeaderSection, ActiveReadsSection, ReadsHistorySection } from './styled';
+import { ReadlingListHeaderSection, ActiveReadsSection, ActiveReadsInnerWrapper, ReadsHistorySection } from './styled';
 import { ReadingListHeader, ActiveReads, ReadsHistory } from './components';
 
 const ReadingList: React.FunctionComponent = () => {
@@ -12,7 +12,9 @@ const ReadingList: React.FunctionComponent = () => {
         />
       </ReadlingListHeaderSection>
       <ActiveReadsSection>
-        <ActiveReads />
+        <ActiveReadsInnerWrapper>
+          <ActiveReads />
+        </ActiveReadsInnerWrapper>
       </ActiveReadsSection>
       <ReadsHistorySection>
         <ReadsHistory />

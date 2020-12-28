@@ -3,6 +3,7 @@ import {
   FinishedBookBackground,
   FinishedBookImg,
   FinishedBookDetailWrapper,
+  FinishedBookLink,
   BookTitle,
   AuthorInfo,
   ReadDate,
@@ -15,7 +16,9 @@ const FinishedBook: React.FunctionComponent = () => {
     <FinishedBookBackground>
       <FinishedBookImg src="/img/example-book-img.jpg" />
       <FinishedBookDetailWrapper>
-        <BookTitle>{`Domain Driven Design: Tackling Complexity in the Heart of Software`}</BookTitle>
+        <FinishedBookLink href="https://www.amazon.com" target="_blank">
+          <BookTitle>{`Domain Driven Design: Tackling Complexity in the Heart of Software`}</BookTitle>
+        </FinishedBookLink>
         <AuthorInfo>{`by Eric Evans`}</AuthorInfo>
         <RatingSection>{`My rating:`}</RatingSection>
         <ReadDate>{`Read date: 2020.10`}</ReadDate>

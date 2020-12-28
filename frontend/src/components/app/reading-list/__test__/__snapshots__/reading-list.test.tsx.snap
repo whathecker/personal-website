@@ -9,7 +9,9 @@ exports[`Test ReadingList component should renders correctly 1`] = `
     />
   </styled__ReadlingListHeaderSection>
   <styled__ActiveReadsSection>
-    <ActiveReads />
+    <styled__ActiveReadsInnerWrapper>
+      <ActiveReads />
+    </styled__ActiveReadsInnerWrapper>
   </styled__ActiveReadsSection>
   <styled__ReadsHistorySection>
     <ReadsHistory />
