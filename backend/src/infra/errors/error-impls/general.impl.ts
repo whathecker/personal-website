@@ -1,13 +1,13 @@
 import { CustomError } from '../../../app/domain/definition/errors/custom-error';
 
 export default class GeneralError extends CustomError {
-    public name = 'generalError';
+  public name = 'generalError';
 
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    toString(): string {
-        return `${this.name}`;
-    }
+  toString(): string {
+    return `${this.name}`;
+  }
 }

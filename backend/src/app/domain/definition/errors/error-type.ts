@@ -3,4 +3,4 @@ export enum ErrorType {
   validation = 'validation',
   fetchBooks = 'fetchBooks',
   listBooks = 'listBooks',
-};
+}
