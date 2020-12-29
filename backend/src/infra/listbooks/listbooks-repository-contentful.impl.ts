@@ -20,7 +20,7 @@ export class ListBooksRepositoryContentful implements IListBooksRepository {
         accessToken: config.CONTNETFUL_ACCESS_TOKEN || '',
       });
 
-      const response = client.getEntries({ content_type: 'book' });
+      const response = await client.getEntries({ content_type: 'book' });
 
       const result: IFetchBooksResult = {
         status: 'FETCH_BOOK_SUCCESS',

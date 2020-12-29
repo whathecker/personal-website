@@ -1,10 +1,11 @@
 import TestEnv from '../../../test-env';
 import { ListBooksRepositoryContentful } from '../listbooks-repository-contentful.impl';
-import { IListBooksOutput } from '../../../app/use-cases/listbooks/interfaces';
+import { IFetchBooksResult } from '../../../app/use-cases/listbooks/interfaces';
 import { Book, ReadStatus } from '../../../app/domain/entity/book';
 import { exampleResponse } from './contentful-example-response';
 
-const listBooksOutput: IListBooksOutput = {
+const listBooksOutput: IFetchBooksResult = {
+  status: 'FETCH_BOOK_SUCCESS',
   books: [
     {
       title: 'Agile Product Management',
@@ -55,3 +56,16 @@ describe('Test listBooksRepository - ContentFul implementation', () => {
     expect(result).toMatchObject(listBooksOutput);
   });
 });
+
+/*
+import * as contentful from 'contentful';
+
+describe('Test listBooksRepository - ContentFul implementation, test with actual API', () => {
+  const repository = new ListBooksRepositoryContentful(contentful);
+  
+  test('List books should return correct data', async () => {
+    const result = await repository.fetchBooks();
+    expect(result.status).toBe('FETCH_BOOK_SUCCESS');
+  });
+});
+*/
