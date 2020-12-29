@@ -1,6 +1,7 @@
 import TestEnv from '../../../../test-env';
 import { ListBookInteractor } from '../listbooks-interactor';
 import { IListBooksOutput, IFetchBooksResult } from '../interfaces';
+import { ReadStatus } from '../../../domain/entity/book';
 
 const fetchBooksResult: IFetchBooksResult = {
   status: 'FETCH_BOOK_FAILED',
@@ -8,7 +9,7 @@ const fetchBooksResult: IFetchBooksResult = {
     {
       title: 'Agile Product Management',
       author: 'Eric Evans',
-      readStatus: 'READING',
+      readStatus: ReadStatus.reading,
       coverImage: '/img/urlpath',
     },
   ],
