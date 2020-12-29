@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { IListBooksRepository, IFetchBooksResult } from '../../app/use-cases/listbooks/interfaces';
 import { Book } from '../../app/domain/entity/book';
+import config from '../../config';
 import contentful from 'contentful';
 
 type Contentful = typeof contentful;
@@ -15,8 +16,8 @@ export class ListBooksRepositoryContentful implements IListBooksRepository {
   async fetchBooks(): Promise<IFetchBooksResult> {
     try {
       const client = this.contentful.createClient({
-        space: '9iq7dqw56i6q',
-        accessToken: 'iEPcZ8-XGnr9j1lsPXAtMs978LZJHfnSW0BZO01vfKI',
+        space: config.CONTENTFUL_SPACE_ID || '',
+        accessToken: config.CONTNETFUL_ACCESS_TOKEN || '',
       });
 
       const response = client.getEntries({ content_type: 'book' });
