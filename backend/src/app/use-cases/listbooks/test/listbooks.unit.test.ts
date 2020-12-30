@@ -1,5 +1,5 @@
 import TestEnv from '../../../../test-env';
-import { ListBookInteractor } from '../listbooks-interactor';
+import { ListBooksInteractor } from '../listbooks-interactor';
 import { IListBooksOutput, IFetchBooksResult } from '../interfaces';
 import { ReadStatus } from '../../../domain/entity/book';
 
@@ -20,7 +20,7 @@ function isListBooksOutput(output: IListBooksOutput): output is IListBooksOutput
 }
 
 describe('Test list books use case', () => {
-  let listBooksInteractor: ListBookInteractor;
+  let listBooksInteractor: ListBooksInteractor;
   let listBooksRepository;
   let errorFactory;
 
@@ -33,7 +33,7 @@ describe('Test list books use case', () => {
       getError: jest.fn(() => new Error('mock error')),
     };
 
-    listBooksInteractor = TestEnv.createTestInstance(ListBookInteractor, [
+    listBooksInteractor = TestEnv.createTestInstance(ListBooksInteractor, [
       {
         name: 'listBooksRepository',
         useValue: listBooksRepository,
@@ -42,7 +42,7 @@ describe('Test list books use case', () => {
         name: 'errorFactory',
         useValue: errorFactory,
       },
-    ]) as ListBookInteractor;
+    ]) as ListBooksInteractor;
   });
 
   describe('Execute list books', () => {

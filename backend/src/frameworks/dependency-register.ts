@@ -4,7 +4,7 @@ import contentful from 'contentful';
 import { App } from '../app';
 
 import { AppErrorFactory } from '../infra/errors/app-error-factory.impl';
-import { ListBookInteractor } from '../app/use-cases/listbooks/listbooks-interactor';
+import { ListBooksInteractor } from '../app/use-cases/listbooks/listbooks-interactor';
 import { ListBooksRepositoryContentful } from '../infra/listbooks/listbooks-repository-contentful.impl';
 
 const dependencyContainer = createContainer({ injectionMode: InjectionMode.CLASSIC });
@@ -19,7 +19,7 @@ dependencyContainer.register({
   errorFactory: asClass(AppErrorFactory),
 
   // interactors
-  listBookInteractor: asClass(ListBookInteractor),
+  listBooksInteractor: asClass(ListBooksInteractor),
 
   // repositories
   listBooksRepository: asClass(ListBooksRepositoryContentful),

@@ -4,7 +4,7 @@ import { ErrorType } from '../../domain/definition/errors/error-type';
 
 import { IListBooksRepository, IListBooksOutput, IFetchBooksResult } from './interfaces';
 
-export class ListBookInteractor implements IInteractor {
+export class ListBooksInteractor implements IInteractor {
   constructor(private listBooksRepository: IListBooksRepository, private errorFactory: IAppErrorFactory) {}
 
   async execute(): Promise<IListBooksOutput> {
@@ -16,7 +16,7 @@ export class ListBookInteractor implements IInteractor {
       }
 
       const output: IListBooksOutput = {
-        books: listBooksResult.books,
+        books: listBooksResult.books || [],
       };
 
       return Promise.resolve(output);
