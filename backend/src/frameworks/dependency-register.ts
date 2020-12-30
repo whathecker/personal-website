@@ -1,5 +1,5 @@
 import { asClass, asValue, createContainer, InjectionMode } from 'awilix';
-import contentful from 'contentful';
+import * as contentful from 'contentful';
 
 import { App } from '../app';
 

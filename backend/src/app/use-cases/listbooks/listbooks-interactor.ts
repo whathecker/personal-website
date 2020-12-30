@@ -11,7 +11,7 @@ export class ListBooksInteractor implements IInteractor {
     try {
       const listBooksResult: IFetchBooksResult = await this.listBooksRepository.fetchBooks();
 
-      if (listBooksResult.status === 'FETCH_BOOK_SUCCESS') {
+      if (listBooksResult.status === 'FETCH_BOOK_FAILED') {
         throw this.errorFactory.getError(ErrorType.fetchBooks, listBooksResult.errorData);
       }
 

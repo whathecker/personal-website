@@ -4,7 +4,7 @@ import { IListBooksOutput, IFetchBooksResult } from '../interfaces';
 import { ReadStatus } from '../../../domain/entity/book';
 
 const fetchBooksResult: IFetchBooksResult = {
-  status: 'FETCH_BOOK_FAILED',
+  status: 'FETCH_BOOK_SUCCESS',
   books: [
     {
       title: 'Agile Product Management',
