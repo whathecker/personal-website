@@ -1,0 +1,67 @@
+openapi: 3.0.0
+info:
+  title: My Persoanl Website API
+  description: Backend of my personal website
+  version: 1.0.0
+servers:
+  - url: http://localhost:9000
+    description: local API host
+
+paths:
+  /books:
+    get:
+      summary: Get list all list of books 
+      description: This endpoint return whole list of book that I'm currentlying reading and have read in the past
+      responses:
+        '200': 
+            description: Success
+            content:
+                application/json:
+                    schema: 
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Book'
+        '422':
+            description: Request not processed due to error
+        '5XX':
+            description: Unexpected error
+
+components:
+  schemas:
+    Book:
+      title: Book
+      type: object
+      required:
+        - title
+        - author
+        - readStatus
+        - coverImage
+      properties:
+        title:
+            type: string
+            description: title of the book
+        author:
+            type: string
+            description: author of the book
+        readStatus:
+            type: string
+            description: read status of the book (either READING or FINISHED)
+        coverImage:
+            type: string
+            description: url path of cover image
+        review:
+            type: string
+            description: review about the book
+        rating:
+            type: integer
+            description: my 5 star-rating about the book
+        readDate:
+            type: string
+            format: date
+            description: the date I finished reading the book
+        id: 
+            type: string
+            description: unique id of the book
+            
+        
+      
