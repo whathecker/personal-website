@@ -3,6 +3,7 @@ import React from 'react';
 import App from 'next/app';
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
+import { GlobalContextProvider } from '../contexts/global-context';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -57,7 +58,9 @@ class MyApp extends App {
     return (
       <>
         <GlobalStyle />
-        <Component {...pageProps} />
+        <GlobalContextProvider>
+          <Component {...pageProps} />
+        </GlobalContextProvider>
       </>
     );
   }
