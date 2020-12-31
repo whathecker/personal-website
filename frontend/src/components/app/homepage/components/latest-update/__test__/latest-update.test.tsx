@@ -3,9 +3,8 @@
 //import { shallow } from 'enzyme';
 
 describe('Test LatestUpdate component', () => {
-
-  it ('temp placeholder test', () => {
-
+  it('temp placeholder test', () => {
+    expect(1).toBe(1);
   });
   /*
   it('should renders correctly', () => {
