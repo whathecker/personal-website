@@ -4,12 +4,14 @@ import { HomepageArea } from '../components/app/homepage';
 import { booksApiHelper } from '../api/api-helpers';
 import { ListBooksQuery, Book } from '../api/types/books';
 
-class Homepage extends React.Component<{}, {}> {
-  static async getInitialProps () {
+type EmptyObj = Record<string, unknown>;
+
+class Homepage extends React.Component<EmptyObj, EmptyObj> {
+  static async getInitialProps(): Promise<Record<string, Book[] | []>> {
     let books: Book[] | [];
 
     try {
-      const query: ListBooksQuery = { status: 'READING' }
+      const query: ListBooksQuery = { status: 'READING' };
       books = await booksApiHelper.listBooks(query);
       console.log(books);
     } catch (err) {
@@ -17,18 +19,18 @@ class Homepage extends React.Component<{}, {}> {
       books = null;
     }
 
-    return { books }
+    return { books };
   }
 
-  render() {
+  render(): React.ReactNode {
     return (
-        <>
-          <Header />
-          <HomepageArea />
-          <Footer />
-        </>
-      );
-  };
+      <>
+        <Header />
+        <HomepageArea />
+        <Footer />
+      </>
+    );
+  }
 }
 
 export default Homepage;

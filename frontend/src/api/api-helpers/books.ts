@@ -2,19 +2,18 @@ import { axiosBackend } from '../instances';
 import { ListBooksQuery, Book } from '../types/books';
 
 class BooksApiHelper {
-  async listBooks (query?: ListBooksQuery) : Promise<Book[]>{
+  async listBooks(query?: ListBooksQuery): Promise<Book[]> {
     try {
-
-      let path: string = '/books/';
+      let path = '/books/';
 
       if (query && query.status) {
         path = path.concat(`?status=${query.status}`);
-      };
+      }
 
       const response = await axiosBackend.get(path, {
         withCredentials: true,
       });
-  
+
       if (response.status === 200) {
         return Promise.resolve(response.data);
       }
@@ -24,7 +23,6 @@ class BooksApiHelper {
       return Promise.reject(err);
     }
   }
-};
+}
 
 export default new BooksApiHelper();
-
