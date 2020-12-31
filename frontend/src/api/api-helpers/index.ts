@@ -1,1 +1,1 @@
-export { default as bookApiHelpers } from './books';
+export { default as booksApiHelper } from './books';
