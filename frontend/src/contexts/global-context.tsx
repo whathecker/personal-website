@@ -1,10 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 import { Book } from '../api/types/books';
 
 type ObjType = Record<string, unknown>;
 type Books = Book[] | [];
 
-interface IGlobalContext {
+export interface IGlobalContext {
   currentlyReadingBooks: Books;
   finishedReadingBooks: Books;
   loadCurrentlyReadingBooks: (BooksInput) => void;

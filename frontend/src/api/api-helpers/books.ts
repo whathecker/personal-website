@@ -15,7 +15,7 @@ class BooksApiHelper {
       });
 
       if (response.status === 200) {
-        return Promise.resolve(response.data);
+        return Promise.resolve(response.data.books);
       }
       return Promise.reject('failed');
     } catch (err) {

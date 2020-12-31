@@ -6,30 +6,22 @@ exports[`Test CurrentlyReading component should renders correctly 1`] = `
     <styled__CurrentlyReadingHeader>
       Currently Reading
     </styled__CurrentlyReadingHeader>
-    <styled__CurrentlyReadingLink>
+    <styled__CurrentlyReadingLink
+      href="/reading-list"
+    >
       checkout my reading list
     </styled__CurrentlyReadingLink>
   </styled__HeaderWrapper>
   <styled__BookWrapper>
     <styled__BookImgWrapper>
-      <styled__BookImgLink
-        href="https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/ref=sr_1_1?dchild=1&keywords=domain+driven+design&qid=1609097175&sr=8-1"
-        target="_blank"
-      >
-        <styled__BookImg
-          src="/img/example-book-img.jpg"
-        />
-      </styled__BookImgLink>
+      <styled__BookImg
+        src="https:url"
+      />
     </styled__BookImgWrapper>
     <styled__BookDetailWrapper>
-      <styled__BookTitleLink
-        href="https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/ref=sr_1_1?dchild=1&keywords=domain+driven+design&qid=1609097175&sr=8-1"
-        target="_blank"
-      >
-        <styled__BookTitle>
-          Domain Driven Design: Tackling Complexity in the Heart of Software
-        </styled__BookTitle>
-      </styled__BookTitleLink>
+      <styled__BookTitle>
+        Agile Product Management
+      </styled__BookTitle>
       <styled__AuthorInfo>
         by Eric Evans
       </styled__AuthorInfo>
