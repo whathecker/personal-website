@@ -1,18 +1,41 @@
 import * as express from 'express';
 import { app } from '../../dependency-register';
+import {
+  IListBooksPresenter,
+  IListBooksPresenterOutput,
+  IListBooksQuery,
+} from './presenter/listbooks/listbooks-presenter';
 
 const router: express.Router = express.Router();
 
-// ADD presenter layer?
+const listBooks = async (query?: IListBooksQuery): Promise<IListBooksPresenterOutput> => {
+  const presenter: IListBooksPresenter = app.dependencyContainer.resolve<IListBooksPresenter>('listBooksPresenter');
 
-const listBooks = async () => {
   const response = await app.mainAppLogics.listBooks();
-  return response;
+
+  let output;
+
+  if (query) {
+    output = await presenter.present(response, query);
+  } else {
+    output = await presenter.present(response);
+  }
+  return output;
 };
 
-router.get('/books/', async (_req: express.Request, res: express.Response) => {
+router.get('/books/', async (req: express.Request, res: express.Response) => {
   try {
-    const output = await listBooks();
+    let output;
+
+    if (req.query.status) {
+      const query: IListBooksQuery = {
+        status: req.query.status as string,
+      };
+      output = await listBooks(query);
+    } else {
+      output = await listBooks();
+    }
+
     return res.status(200).json(output);
   } catch (error) {
     console.error(error);
