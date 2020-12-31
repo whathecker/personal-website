@@ -12,6 +12,12 @@ paths:
     get:
       summary: Get list all list of books 
       description: This endpoint return whole list of book that I'm currentlying reading and have read in the past
+      parameters:
+        - in: query
+          name: status
+          schema:
+            type: string
+          description: query by readStatus of book. accepted values are either READING or FINISHED
       responses:
         '200': 
             description: Success
