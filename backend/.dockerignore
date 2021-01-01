@@ -1,0 +1,11 @@
+# CI/CD configs
+.github
+
+# k8s configs
+.k8s
+
+#build folder
+.build
+
+#node_modules in local file system
+.node_modules
