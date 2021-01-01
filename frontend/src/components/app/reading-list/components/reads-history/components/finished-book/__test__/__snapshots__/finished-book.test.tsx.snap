@@ -25,7 +25,7 @@ exports[`Test FinishedBook component should renders correctly 1`] = `
       </styled__RatingStarSection>
     </styled__RatingSection>
     <styled__ReadDate>
-      Read date: 2020.10
+      Read date: 1995.12
     </styled__ReadDate>
     <styled__MyReview
       className="review-section"
@@ -48,9 +48,6 @@ exports[`Test FinishedBook component should renders correctly with only required
     <styled__AuthorInfo>
       by Eric Evans
     </styled__AuthorInfo>
-    <styled__ReadDate>
-      Read date: 2020.10
-    </styled__ReadDate>
   </styled__FinishedBookDetailWrapper>
 </styled__FinishedBookBackground>
 `;

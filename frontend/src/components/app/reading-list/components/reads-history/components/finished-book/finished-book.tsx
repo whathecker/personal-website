@@ -32,6 +32,13 @@ const FinishedBook: React.FunctionComponent<FinishedBookProps> = (props: Finishe
     );
   };
 
+  const renderReadDate = (date: Date): React.ReactNode => {
+    const fullYear = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const formattedDate = `${fullYear}.${month}`
+    return <ReadDate>{`Read date: ${formattedDate}`}</ReadDate>
+  };
+
   const renderReview = (review: string): React.ReactNode => {
     return <MyReview className="review-section">{review}</MyReview>;
   };
@@ -43,7 +50,7 @@ const FinishedBook: React.FunctionComponent<FinishedBookProps> = (props: Finishe
         <BookTitle>{book.title}</BookTitle>
         <AuthorInfo>{`by ${book.author}`}</AuthorInfo>
         {book && book.rating ? renderRating(book.rating) : null}
-        <ReadDate>{`Read date: 2020.10`}</ReadDate>
+        {book && book.readDate ? renderReadDate(new Date(book.readDate)) : null}
         {book && book.review ? renderReview(book.review) : null}
       </FinishedBookDetailWrapper>
     </FinishedBookBackground>
