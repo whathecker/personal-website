@@ -35,8 +35,8 @@ const FinishedBook: React.FunctionComponent<FinishedBookProps> = (props: Finishe
   const renderReadDate = (date: Date): React.ReactNode => {
     const fullYear = date.getFullYear();
     const month = date.getMonth() + 1;
-    const formattedDate = `${fullYear}.${month}`
-    return <ReadDate>{`Read date: ${formattedDate}`}</ReadDate>
+    const formattedDate = `${fullYear}.${month}`;
+    return <ReadDate>{`Read date: ${formattedDate}`}</ReadDate>;
   };
 
   const renderReview = (review: string): React.ReactNode => {
