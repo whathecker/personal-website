@@ -11,10 +11,10 @@ const ReadsHistory: React.FunctionComponent<ReadsHistoryProps> = (props: ReadsHi
   const { books } = props;
 
   const renderReadsHistory = (books: FinishedReadingBook[]): React.ReactNode => {
-    return books.map((_book: FinishedReadingBook, index: number) => {
+    return books.map((book: FinishedReadingBook, index: number) => {
       return (
         <FinishedBookWrapper key={index} className="finished-book">
-          <FinishedBook />
+          <FinishedBook book={book} />
         </FinishedBookWrapper>
       );
     });

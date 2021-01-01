@@ -3,7 +3,6 @@ import {
   FinishedBookBackground,
   FinishedBookImg,
   FinishedBookDetailWrapper,
-  FinishedBookLink,
   BookTitle,
   AuthorInfo,
   ReadDate,
@@ -13,24 +12,39 @@ import {
   RatingStarSection,
 } from './styled';
 import { Rating } from './components';
+import { FinishedReadingBook } from '../../../../types';
 
-const FinishedBook: React.FunctionComponent = () => {
+export interface FinishedBookProps {
+  book: FinishedReadingBook;
+}
+
+const FinishedBook: React.FunctionComponent<FinishedBookProps> = (props: FinishedBookProps) => {
+  const { book } = props;
+
+  const renderRating = (rating: number): React.ReactNode => {
+    return (
+      <RatingSection className="rating-section">
+        <RatingSubheader>{`My Rating:`}</RatingSubheader>
+        <RatingStarSection>
+          <Rating rating={rating} />
+        </RatingStarSection>
+      </RatingSection>
+    );
+  };
+
+  const renderReview = (review: string): React.ReactNode => {
+    return <MyReview className="review-section">{review}</MyReview>;
+  };
+
   return (
     <FinishedBookBackground>
-      <FinishedBookImg src="/img/example-book-img.jpg" />
+      <FinishedBookImg src={`https:${book.coverImage}`} />
       <FinishedBookDetailWrapper>
-        <FinishedBookLink href="https://www.amazon.com" target="_blank">
-          <BookTitle>{`Domain Driven Design: Tackling Complexity in the Heart of Software`}</BookTitle>
-        </FinishedBookLink>
-        <AuthorInfo>{`by Eric Evans`}</AuthorInfo>
-        <RatingSection>
-          <RatingSubheader>{`My Rating:`}</RatingSubheader>
-          <RatingStarSection>
-            <Rating rating={4} />
-          </RatingStarSection>
-        </RatingSection>
+        <BookTitle>{book.title}</BookTitle>
+        <AuthorInfo>{`by ${book.author}`}</AuthorInfo>
+        {book && book.rating ? renderRating(book.rating) : null}
         <ReadDate>{`Read date: 2020.10`}</ReadDate>
-        <MyReview>{`Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. v Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book.`}</MyReview>
+        {book && book.review ? renderReview(book.review) : null}
       </FinishedBookDetailWrapper>
     </FinishedBookBackground>
   );
