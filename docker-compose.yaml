@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+     - 3000:3000
+    environment:
+      - NEXT_PUBLIC_EXE_CTX=docker
+    depends_on:
+      - backend
+  backend:
+    build: ./backend
+    ports:
+    - 9000:9000
