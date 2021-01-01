@@ -1,19 +1,32 @@
 import * as React from 'react';
-import { StyledH2, ActiveBookWrapper, BookImg, BookDetailWrapper, BookLink, BookTitle, AuthorInfo } from './styled';
+import { StyledH2, ActiveBookWrapper, BookImg, BookDetailWrapper, BookTitle, AuthorInfo } from './styled';
+import { ActivelyReadingBook } from '../../types';
 
-const ActiveReads: React.FunctionComponent = () => {
+export interface ActiveReadsProps {
+  books: ActivelyReadingBook[];
+}
+
+const ActiveReads: React.FunctionComponent<ActiveReadsProps> = (props: ActiveReadsProps) => {
+  const { books } = props;
+
+  const renderActiveReads = (books: ActivelyReadingBook[]): React.ReactNode => {
+    return books.map((book: ActivelyReadingBook, index: number) => {
+      return (
+        <ActiveBookWrapper className="active-book" key={index}>
+          <BookImg src={`https:${book.coverImage}`} />
+          <BookDetailWrapper>
+            <BookTitle>{book.title}</BookTitle>
+            <AuthorInfo>{`by ${book.author}`}</AuthorInfo>
+          </BookDetailWrapper>
+        </ActiveBookWrapper>
+      );
+    });
+  };
+
   return (
     <>
       <StyledH2>{`Currently reading`}</StyledH2>
-      <ActiveBookWrapper>
-        <BookImg src="/img/example-book-img.jpg" />
-        <BookDetailWrapper>
-          <BookLink href="https://www.amazon.com" target="_blank">
-            <BookTitle>{`Domain Driven Design: Tackling Complexity in the Heart of Software`}</BookTitle>
-          </BookLink>
-          <AuthorInfo>{`by Eric Evans`}</AuthorInfo>
-        </BookDetailWrapper>
-      </ActiveBookWrapper>
+      {books.length > 0 && books ? renderActiveReads(books) : null}
     </>
   );
 };

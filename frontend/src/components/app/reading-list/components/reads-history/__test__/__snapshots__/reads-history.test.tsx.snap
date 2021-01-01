@@ -5,10 +5,40 @@ exports[`Test ReadsHistory component should renders correctly 1`] = `
   <styled__StyledH2>
     What I have read
   </styled__StyledH2>
-  <styled__FinishedBookWrapper>
-    <FinishedBook />
-    <FinishedBook />
-    <FinishedBook />
-  </styled__FinishedBookWrapper>
+  <styled__FinishedBooksSection>
+    <styled__FinishedBookWrapper
+      className="finished-book"
+      key="0"
+    >
+      <FinishedBook
+        book={
+          Object {
+            "author": "Eric Evans",
+            "coverImage": "//images.ctfassets.net/9iq7dqw56i6q/36gMyk68F3OfW1K9iBDvZV/defc330e0ae1fd27933e82117c13b3bd/domain_driven_design.jpg",
+            "rating": 4,
+            "readDate": 1995-12-17T02:24:00.000Z,
+            "review": "My review",
+            "title": "Domain-Driven Design: Tackling Complexity in the Heart of Software",
+          }
+        }
+      />
+    </styled__FinishedBookWrapper>
+    <styled__FinishedBookWrapper
+      className="finished-book"
+      key="1"
+    >
+      <FinishedBook
+        book={
+          Object {
+            "author": "Eric Evans",
+            "coverImage": "//images.ctfassets.net/9iq7dqw56i6q/36gMyk68F3OfW1K9iBDvZV/defc330e0ae1fd27933e82117c13b3bd/domain_driven_design.jpg",
+            "rating": 4,
+            "readDate": 1995-12-17T02:24:00.000Z,
+            "title": "Domain-Driven Design: Tackling Complexity in the Heart of Software",
+          }
+        }
+      />
+    </styled__FinishedBookWrapper>
+  </styled__FinishedBooksSection>
 </Fragment>
 `;

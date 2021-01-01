@@ -1,8 +1,20 @@
 import * as React from 'react';
 import { ReadlingListHeaderSection, ActiveReadsSection, ActiveReadsInnerWrapper, ReadsHistorySection } from './styled';
 import { ReadingListHeader, ActiveReads, ReadsHistory } from './components';
+import { GlobalContext, IGlobalContext } from '../../../contexts/global-context';
+import { ActivelyReadingBook, FinishedReadingBook } from './types';
 
 const ReadingList: React.FunctionComponent = () => {
+  const context: IGlobalContext = React.useContext(GlobalContext);
+
+  const renderActiveReads = (currentlyReadingBooks: ActivelyReadingBook[]) => {
+    return <ActiveReads books={currentlyReadingBooks} />;
+  };
+
+  const renderFinishedReads = (finishedBooks: FinishedReadingBook[]) => {
+    return <ReadsHistory books={finishedBooks} />;
+  };
+
   return (
     <>
       <ReadlingListHeaderSection>
@@ -13,11 +25,13 @@ const ReadingList: React.FunctionComponent = () => {
       </ReadlingListHeaderSection>
       <ActiveReadsSection>
         <ActiveReadsInnerWrapper>
-          <ActiveReads />
+          {context && context.currentlyReadingBooks.length > 0
+            ? renderActiveReads(context.currentlyReadingBooks)
+            : null}
         </ActiveReadsInnerWrapper>
       </ActiveReadsSection>
       <ReadsHistorySection>
-        <ReadsHistory />
+        {context && context.finishedReadingBooks.length > 0 ? renderFinishedReads(context.finishedReadingBooks) : null}
       </ReadsHistorySection>
     </>
   );

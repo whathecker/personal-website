@@ -1,16 +1,29 @@
 import * as React from 'react';
-import { StyledH2, FinishedBookWrapper } from './styled';
+import { StyledH2, FinishedBooksSection, FinishedBookWrapper } from './styled';
 import { FinishedBook } from './components';
+import { FinishedReadingBook } from '../../types';
 
-const ReadsHistory: React.FunctionComponent = () => {
+export interface ReadsHistoryProps {
+  books: FinishedReadingBook[];
+}
+
+const ReadsHistory: React.FunctionComponent<ReadsHistoryProps> = (props: ReadsHistoryProps) => {
+  const { books } = props;
+
+  const renderReadsHistory = (books: FinishedReadingBook[]): React.ReactNode => {
+    return books.map((book: FinishedReadingBook, index: number) => {
+      return (
+        <FinishedBookWrapper key={index} className="finished-book">
+          <FinishedBook book={book} />
+        </FinishedBookWrapper>
+      );
+    });
+  };
+
   return (
     <>
       <StyledH2>{`What I have read`}</StyledH2>
-      <FinishedBookWrapper>
-        <FinishedBook />
-        <FinishedBook />
-        <FinishedBook />
-      </FinishedBookWrapper>
+      <FinishedBooksSection>{books.length > 0 && books ? renderReadsHistory(books) : null}</FinishedBooksSection>
     </>
   );
 };

@@ -3,21 +3,18 @@
 exports[`Test FinishedBook component should renders correctly 1`] = `
 <styled__FinishedBookBackground>
   <styled__FinishedBookImg
-    src="/img/example-book-img.jpg"
+    src="https://images.ctfassets.net/9iq7dqw56i6q/36gMyk68F3OfW1K9iBDvZV/defc330e0ae1fd27933e82117c13b3bd/domain_driven_design.jpg"
   />
   <styled__FinishedBookDetailWrapper>
-    <styled__FinishedBookLink
-      href="https://www.amazon.com"
-      target="_blank"
-    >
-      <styled__BookTitle>
-        Domain Driven Design: Tackling Complexity in the Heart of Software
-      </styled__BookTitle>
-    </styled__FinishedBookLink>
+    <styled__BookTitle>
+      Domain-Driven Design: Tackling Complexity in the Heart of Software
+    </styled__BookTitle>
     <styled__AuthorInfo>
       by Eric Evans
     </styled__AuthorInfo>
-    <styled__RatingSection>
+    <styled__RatingSection
+      className="rating-section"
+    >
       <styled__RatingSubheader>
         My Rating:
       </styled__RatingSubheader>
@@ -28,11 +25,29 @@ exports[`Test FinishedBook component should renders correctly 1`] = `
       </styled__RatingStarSection>
     </styled__RatingSection>
     <styled__ReadDate>
-      Read date: 2020.10
+      Read date: 1995.12
     </styled__ReadDate>
-    <styled__MyReview>
-      Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. v Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book. Here is my reveiw about this book.
+    <styled__MyReview
+      className="review-section"
+    >
+      My review
     </styled__MyReview>
+  </styled__FinishedBookDetailWrapper>
+</styled__FinishedBookBackground>
+`;
+
+exports[`Test FinishedBook component should renders correctly with only required fields 1`] = `
+<styled__FinishedBookBackground>
+  <styled__FinishedBookImg
+    src="https://images.ctfassets.net/9iq7dqw56i6q/36gMyk68F3OfW1K9iBDvZV/defc330e0ae1fd27933e82117c13b3bd/domain_driven_design.jpg"
+  />
+  <styled__FinishedBookDetailWrapper>
+    <styled__BookTitle>
+      Domain-Driven Design: Tackling Complexity in the Heart of Software
+    </styled__BookTitle>
+    <styled__AuthorInfo>
+      by Eric Evans
+    </styled__AuthorInfo>
   </styled__FinishedBookDetailWrapper>
 </styled__FinishedBookBackground>
 `;
