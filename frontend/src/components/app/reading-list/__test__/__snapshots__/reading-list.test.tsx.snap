@@ -11,8 +11,6 @@ exports[`Test ReadingList component should renders correctly 1`] = `
   <styled__ActiveReadsSection>
     <styled__ActiveReadsInnerWrapper />
   </styled__ActiveReadsSection>
-  <styled__ReadsHistorySection>
-    <ReadsHistory />
-  </styled__ReadsHistorySection>
+  <styled__ReadsHistorySection />
 </Fragment>
 `;

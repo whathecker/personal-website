@@ -12,3 +12,12 @@ export interface ActivelyReadingBook {
   author: string;
   coverImage: string;
 }
+
+export interface FinishedReadingBook {
+  title: string;
+  author: string;
+  coverImage: string;
+  rating?: number;
+  readDate?: Date;
+  review?: string;
+}

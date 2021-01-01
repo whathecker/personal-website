@@ -5,10 +5,19 @@ exports[`Test ReadsHistory component should renders correctly 1`] = `
   <styled__StyledH2>
     What I have read
   </styled__StyledH2>
-  <styled__FinishedBookWrapper>
-    <FinishedBook />
-    <FinishedBook />
-    <FinishedBook />
-  </styled__FinishedBookWrapper>
+  <styled__FinishedBooksSection>
+    <styled__FinishedBookWrapper
+      className="finished-book"
+      key="0"
+    >
+      <FinishedBook />
+    </styled__FinishedBookWrapper>
+    <styled__FinishedBookWrapper
+      className="finished-book"
+      key="1"
+    >
+      <FinishedBook />
+    </styled__FinishedBookWrapper>
+  </styled__FinishedBooksSection>
 </Fragment>
 `;
