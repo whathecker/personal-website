@@ -8,6 +8,10 @@ function getBackendHostUrl(): string {
     hostUrl = 'http://localhost:9000';
   }
 
+  if (executionContext === 'docker') {
+    hostUrl = 'http://backend:9000';
+  }
+
   if (executionContext === 'minikube') {
     let minikubeIP;
 

@@ -9,3 +9,6 @@ public/sitemap.xml
 
 # nextjs build output in local file system
 .next
+
+# local env variables
+.env

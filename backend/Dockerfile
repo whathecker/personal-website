@@ -14,6 +14,7 @@ COPY . .
 RUN npm run compile
 
 # Set env var PORT num
+EXPOSE 9000
 ENV PORT="9000"
 
 # Run application
