@@ -35,7 +35,6 @@ class ReadingListPage extends React.Component<ObjType, ObjType> {
   }
 
   render(): React.ReactNode {
-    console.log(this.context);
     return (
       <>
         <Header />

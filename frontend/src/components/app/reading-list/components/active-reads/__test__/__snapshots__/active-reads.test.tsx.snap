@@ -5,19 +5,33 @@ exports[`Test ActiveReads component should renders correctly 1`] = `
   <styled__StyledH2>
     Currently reading
   </styled__StyledH2>
-  <styled__ActiveBookWrapper>
+  <styled__ActiveBookWrapper
+    className="active-book"
+    key="0"
+  >
     <styled__BookImg
-      src="/img/example-book-img.jpg"
+      src="https://images.ctfassets.net/9iq7dqw56i6q/36gMyk68F3OfW1K9iBDvZV/defc330e0ae1fd27933e82117c13b3bd/domain_driven_design.jpg"
     />
     <styled__BookDetailWrapper>
-      <styled__BookLink
-        href="https://www.amazon.com"
-        target="_blank"
-      >
-        <styled__BookTitle>
-          Domain Driven Design: Tackling Complexity in the Heart of Software
-        </styled__BookTitle>
-      </styled__BookLink>
+      <styled__BookTitle>
+        Domain-Driven Design: Tackling Complexity in the Heart of Software
+      </styled__BookTitle>
+      <styled__AuthorInfo>
+        by Eric Evans
+      </styled__AuthorInfo>
+    </styled__BookDetailWrapper>
+  </styled__ActiveBookWrapper>
+  <styled__ActiveBookWrapper
+    className="active-book"
+    key="1"
+  >
+    <styled__BookImg
+      src="https://images.ctfassets.net/9iq7dqw56i6q/36gMyk68F3OfW1K9iBDvZV/defc330e0ae1fd27933e82117c13b3bd/domain_driven_design.jpg"
+    />
+    <styled__BookDetailWrapper>
+      <styled__BookTitle>
+        Domain-Driven Design: Tackling Complexity in the Heart of Software
+      </styled__BookTitle>
       <styled__AuthorInfo>
         by Eric Evans
       </styled__AuthorInfo>

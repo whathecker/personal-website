@@ -6,3 +6,9 @@ export interface ReadingListHeaderProps {
 export interface RatingProps {
   rating: number;
 }
+
+export interface ActivelyReadingBook {
+  title: string;
+  author: string;
+  coverImage: string;
+}

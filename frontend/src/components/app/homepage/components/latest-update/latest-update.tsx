@@ -1,12 +1,7 @@
 import * as React from 'react';
 import { CurrentlyReading } from './components';
 import { GlobalContext, IGlobalContext } from '../../../../../contexts/global-context';
-
-type Book = {
-  title: string;
-  author: string;
-  coverImage: string;
-};
+import { Book } from '../../../../../api/types/books';
 
 const LatestUpdate: React.FunctionComponent = () => {
   const context: IGlobalContext = React.useContext(GlobalContext);
