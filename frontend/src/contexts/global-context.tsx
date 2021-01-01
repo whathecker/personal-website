@@ -8,6 +8,7 @@ export interface IGlobalContext {
   currentlyReadingBooks: Books;
   finishedReadingBooks: Books;
   loadCurrentlyReadingBooks: (BooksInput) => void;
+  loadFinishedBooks: (BooksInput) => void;
 }
 
 type DefaultValue = undefined;
@@ -22,11 +23,16 @@ class GlobalContextProvider extends React.Component<ObjType, IGlobalContext> {
       currentlyReadingBooks: [],
       finishedReadingBooks: [],
       loadCurrentlyReadingBooks: this.loadCurrentlyReadingBooks.bind(this),
+      loadFinishedBooks: this.loadFinishedBooks.bind(this),
     };
   }
 
   loadCurrentlyReadingBooks(books: Books): void {
     this.setState({ currentlyReadingBooks: books });
+  }
+
+  loadFinishedBooks(books: Books): void {
+    this.setState({ finishedReadingBooks: books });
   }
 
   render(): React.ReactNode {
