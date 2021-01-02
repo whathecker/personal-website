@@ -51,6 +51,9 @@ jobs:
     name: Build Docker images
     needs: test-frontend
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
     env:
       HASH: $(git rev-parse --short "$GITHUB_SHA")
       BRANCH: ${GITHUB_REF##*/}
@@ -70,7 +73,6 @@ jobs:
       # Build docker image
       - name: Build image
         run: |-
-          cd frontend
           ls
           docker build -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:$GITHUB_SHA .
           docker build -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:latest -f .
