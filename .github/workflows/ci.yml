@@ -47,52 +47,14 @@ jobs:
       - run: npm ci
       - run: npm run test
 
-  build-image-frontend:
-    name: Build Docker image of frontend
+  build-images:
+    name: Build Docker images
     needs: test-frontend
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: frontend
     env:
       HASH: $(git rev-parse --short "$GITHUB_SHA")
       BRANCH: ${GITHUB_REF##*/}
       SERVICE_NAME_FE: ${{ secrets.SERVICE_NAME_FE }}
-      PROJECT_ID: ${{ secrets.PROJECT_ID }}
-    steps:
-      - uses: actions/checkout@v2
-
-      # Setup gcloud CLI
-      - uses: google-github-actions/setup-gcloud@master
-        with:
-          service_account_key: ${{ secrets.GCR_CONTAINER_REGISTRY_KEY }}
-          project_id: ${{ secrets.PROJECT_ID }}
-          export_default_credentials: true
-
-      # Build docker image
-      - name: Build image
-        run: |-
-          docker build -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:$GITHUB_SHA .
-          docker build -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:latest .
-      # Configure docker to use the gcloud command-line tool as a credential helper
-      - run: gcloud auth configure-docker -q
-
-      # Push image to Google Container Registry
-      - name: Push image
-        run: |-
-          docker push eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:$GITHUB_SHA
-          docker push eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:latest
-
-  build-image-backend:
-    name: Build Docker image of backend
-    needs: build-image-frontend
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: backend
-    env:
-      HASH: $(git rev-parse --short "$GITHUB_SHA")
-      BRANCH: ${GITHUB_REF##*/}
       SERVICE_NAME_BE: ${{ secrets.SERVICE_NAME_BE }}
       PROJECT_ID: ${{ secrets.PROJECT_ID }}
     steps:
@@ -108,13 +70,17 @@ jobs:
       # Build docker image
       - name: Build image
         run: |-
-          docker build -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_BE:$GITHUB_SHA .
-          docker build -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_BE:latest .
+          docker build . -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:$GITHUB_SHA -f frontend/Dockerfile
+          docker build . -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:latest -f frontend/Dockerfile
+          docker build . -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_BE:$GITHUB_SHA -f backend/Dockerfile
+          docker build . -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_BE:latest -f backend/Dockerfile
       # Configure docker to use the gcloud command-line tool as a credential helper
       - run: gcloud auth configure-docker -q
 
       # Push image to Google Container Registry
       - name: Push image
         run: |-
+          docker push eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:$GITHUB_SHA
+          docker push eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:latest
           docker push eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_BE:$GITHUB_SHA
           docker push eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_BE:latest
