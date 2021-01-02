@@ -70,10 +70,10 @@ jobs:
       # Build docker image
       - name: Build image
         run: |-
-          docker build . -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:$GITHUB_SHA -f frontend/Dockerfile
-          docker build . -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:latest -f frontend/Dockerfile
-          docker build . -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_BE:$GITHUB_SHA -f backend/Dockerfile
-          docker build . -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_BE:latest -f backend/Dockerfile
+          docker build ./frontend -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:$GITHUB_SHA -f frontend/Dockerfile
+          docker build ./frontend -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:latest -f frontend/Dockerfile
+          docker build ./backend -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_BE:$GITHUB_SHA -f backend/Dockerfile
+          docker build ./backend -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_BE:latest -f backend/Dockerfile
       # Configure docker to use the gcloud command-line tool as a credential helper
       - run: gcloud auth configure-docker -q
 
