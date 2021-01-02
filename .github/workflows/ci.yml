@@ -68,7 +68,6 @@ jobs:
       # Build docker image
       - name: Build image
         run: |-
-          ls
           docker build ./frontend --tag eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:$GITHUB_SHA
           docker build ./frontend --tag eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:latest
           docker build ./backend --tag eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_BE:$GITHUB_SHA
