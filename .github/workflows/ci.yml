@@ -57,7 +57,7 @@ jobs:
     env:
       HASH: $(git rev-parse --short "$GITHUB_SHA")
       BRANCH: ${GITHUB_REF##*/}
-      SERVICE_NAME: ${{ secrets.SERVICE_NAME_FE }}
+      SERVICE_NAME_FE: ${{ secrets.SERVICE_NAME_FE }}
       PROJECT_ID: ${{ secrets.PROJECT_ID }}
     steps:
       - uses: actions/checkout@v2
@@ -73,7 +73,8 @@ jobs:
       - name: Build image
         run: |-
           ls
-          docker build . -t eu.gcr.io/$PRODJECT_ID/$SERVICE_NAME:$GITHUB_SHA
+          docker build . -t eu.gcr.io/$PRODJECT_ID/$SERVICE_NAME_FE:$GITHUB_SHA
+          docker build . -t eu.gcr.io/$PRODJECT_ID/$SERVICE_NAME_FE:latest
       # Configure docker to use the gcloud command-line tool as a credential helper
       - run: gcloud auth configure-docker -q
 
