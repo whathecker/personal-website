@@ -51,6 +51,9 @@ jobs:
     name: Build Docker images
     needs: test-frontend
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
     env:
       HASH: $(git rev-parse --short "$GITHUB_SHA")
       BRANCH: ${GITHUB_REF##*/}
@@ -70,10 +73,8 @@ jobs:
       # Build docker image
       - name: Build image
         run: |-
-          docker build ./frontend -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:$GITHUB_SHA -f frontend/Dockerfile
-          docker build ./frontend -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:latest -f frontend/Dockerfile
-          docker build ./backend -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_BE:$GITHUB_SHA -f backend/Dockerfile
-          docker build ./backend -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_BE:latest -f backend/Dockerfile
+          docker build . -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:$GITHUB_SHA
+          docker build . -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:latest
       # Configure docker to use the gcloud command-line tool as a credential helper
       - run: gcloud auth configure-docker -q
 
@@ -82,5 +83,3 @@ jobs:
         run: |-
           docker push eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:$GITHUB_SHA
           docker push eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_FE:latest
-          docker push eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_BE:$GITHUB_SHA
-          docker push eu.gcr.io/$PROJECT_ID/$SERVICE_NAME_BE:latest
