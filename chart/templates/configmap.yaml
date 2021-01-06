@@ -1,0 +1,21 @@
+{{- if .Values.configs }}
+{{- $namespace := .Values.namespace -}}
+{{- range $configs := .Values.configs }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+ name: {{ $configs.name }}
+ namespace: {{ $.Values.namespace }}
+  {{- template "default.labels" $ }}
+  {{- template "default.annotations" $ }}
+data: 
+ {{- if eq $configs.name "frontend-configmap" }}
+  {{ include "frontend.config" . | indent 1 }}
+ {{- else if eq $configs.name "backend-configmap" }}
+  {{ include "backend.config" . | indent 1 }}
+ {{- end }}
+
+{{- end }}
+{{- end }}
+

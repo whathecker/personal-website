@@ -1,0 +1,46 @@
+namespace: personal-website-local-cluster
+
+ingress:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: $1
+
+services:
+  - name: frontend-cluster-ip-service
+    path: /?(.*)
+    selectorValue: frontend
+    type: ClusterIP
+    port: 3000
+    targetPort: 3000
+  - name: backend-cluster-ip-service
+    path: /api/?(.*)
+    selectorValue: backend
+    type: ClusterIP
+    port: 9000
+    targetPort: 9000
+
+deployments:
+  - name: frontend-deployment
+    replicas: 2
+    selectorValue: frontend
+    containerName: frontend
+    imagePath: eu.gcr.io/yunjae/frontend:latest
+    containerPort: 3000
+  - name: backend-deployment
+    replicas: 2
+    selectorValue: backend
+    containerName: backend
+    imagePath: eu.gcr.io/yunjae/backend:latest
+    containerPort: 9000
+    secret:
+      name: contentful
+
+configs:
+ - name: frontend-configmap
+ - name: backend-configmap
+
+localImageKey:
+ name: gcr-json-key
+    
+    
+

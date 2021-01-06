@@ -1,0 +1,42 @@
+{{- if .Values.deployments }}
+{{- $localImageKey := .Values.localImageKey -}}
+{{- range $deployment := .Values.deployments }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: {{ $deployment.name }}
+ namespace: {{ $.Values.namespace }}
+ 
+{{- template "default.labels" $ }}
+{{- template "default.annotations" $ }}
+
+spec:
+ replicas: {{ $deployment.replicas }}
+ selector:
+  matchLabels:
+   component: {{ $deployment.selectorValue }}
+ template:
+  metadata:
+   labels:
+    component: {{ $deployment.selectorValue }}
+  spec:
+   containers:
+    - name: {{ $deployment.containerName }}
+      image: {{ $deployment.imagePath }}
+      ports: 
+       - containerPort: {{ $deployment.containerPort }}
+      envFrom:
+       - configMapRef:
+          name: {{ $deployment.selectorValue }}-configmap
+       {{- if $deployment.secret }}
+       - secretRef:
+          name: {{ $deployment.secret.name }}
+       {{- end}}
+   {{- if $localImageKey }}
+   imagePullSecrets:
+    - name: {{ $localImageKey.name }}
+   {{- end }}
+{{- end }}
+{{- end }}
+
