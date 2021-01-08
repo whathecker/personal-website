@@ -23,6 +23,12 @@ spec:
       image: {{ $deployment.imagePath }}
       ports: 
        - containerPort: {{ $deployment.containerPort }}
+      livenessProbe:
+       httpGet:
+        path: {{ $deployment.healthCheckPath }}
+        port: {{ $deployment.containerPort }}
+       initialDelaySeconds: {{ $deployment.healthCheckInitialDelay }}
+       periodSeconds: {{ $deployment.healthCheckInterval }}
       envFrom:
        - configMapRef:
           name: {{ $deployment.selectorValue }}-configmap
