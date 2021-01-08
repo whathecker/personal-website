@@ -39,8 +39,6 @@ configs:
  - name: frontend-configmap
  - name: backend-configmap
 
-localImageKey:
- name: gcr-json-key
     
     
 

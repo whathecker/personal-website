@@ -33,10 +33,8 @@ spec:
        - secretRef:
           name: {{ $deployment.secret.name }}
        {{- end}}
-   {{- if $localImageKey }}
    imagePullSecrets:
-    - name: {{ $localImageKey.name }}
-   {{- end }}
+    - name: gcr-json-key
 {{- end }}
 {{- end }}
 
