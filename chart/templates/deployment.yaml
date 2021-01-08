@@ -1,5 +1,4 @@
 {{- if .Values.deployments }}
-{{- $localImageKey := .Values.localImageKey -}}
 {{- range $deployment := .Values.deployments }}
 ---
 apiVersion: apps/v1
@@ -7,10 +6,8 @@ kind: Deployment
 metadata:
  name: {{ $deployment.name }}
  namespace: {{ $.Values.namespace }}
- 
 {{- template "default.labels" $ }}
 {{- template "default.annotations" $ }}
-
 spec:
  replicas: {{ $deployment.replicas }}
  selector:

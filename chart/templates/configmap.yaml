@@ -10,10 +10,8 @@ metadata:
   {{- template "default.labels" $ }}
   {{- template "default.annotations" $ }}
 data: 
- {{- if eq $configs.name "frontend-configmap" }}
-  {{ include "frontend.config" . | indent 1 }}
- {{- else if eq $configs.name "backend-configmap" }}
-  {{ include "backend.config" . | indent 1 }}
+ {{- range $key, $value := $configs.data }}
+ {{ $key }}: {{ $value }}
  {{- end }}
 
 {{- end }}

@@ -1,10 +1,5 @@
 namespace: personal-website-local-cluster
 
-ingress:
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/rewrite-target: $1
-
 services:
   - name: frontend-cluster-ip-service
     path: /?(.*)
@@ -37,7 +32,12 @@ deployments:
 
 configs:
  - name: frontend-configmap
+   data: 
+    NEXT_PUBLIC_EXE_CTX: minikube
+    NEXT_PUBLIC_MINIKUBE_IP: 192.168.64.4
  - name: backend-configmap
+   data:
+    DEPLOYMENT_ENV: dev
 
     
     
