@@ -1,0 +1,19 @@
+{{- if .Values.services }}
+{{- range $service := .Values.services }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+ name: {{ $service.name }}
+ namespace: {{ $.Values.namespace }}
+ {{ template "default.labels" $ }}
+ {{ template "default.annotations" $ }}
+spec:
+    type: {{ $service.type }}
+    selector:
+        component: {{ $service.selectorValue }}
+    ports:
+        - port: {{ $service.port }}
+          targetPort: {{ $service.targetPort }}
+{{- end }}
+{{- end }}

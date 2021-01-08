@@ -1,0 +1,50 @@
+namespace: personal-website-local-cluster
+
+services:
+  - name: frontend-cluster-ip-service
+    path: /?(.*)
+    selectorValue: frontend
+    type: ClusterIP
+    port: 3000
+    targetPort: 3000
+  - name: backend-cluster-ip-service
+    path: /api/?(.*)
+    selectorValue: backend
+    type: ClusterIP
+    port: 9000
+    targetPort: 9000
+    
+deployments:
+  - name: frontend-deployment
+    replicas: 2
+    selectorValue: frontend
+    containerName: frontend
+    imagePath: eu.gcr.io/yunjae/frontend:latest
+    containerPort: 3000
+    healthCheckPath: /
+    healthCheckInitialDelay: 40
+    healthCheckInterval: 30
+  - name: backend-deployment
+    replicas: 2
+    selectorValue: backend
+    containerName: backend
+    imagePath: eu.gcr.io/yunjae/backend:latest
+    containerPort: 9000
+    healthCheckPath: /health
+    healthCheckInitialDelay: 10
+    healthCheckInterval: 15
+    secret:
+      name: contentful
+
+configs:
+ - name: frontend-configmap
+   data: 
+    NEXT_PUBLIC_EXE_CTX: minikube
+    NEXT_PUBLIC_MINIKUBE_IP: 192.168.64.4
+ - name: backend-configmap
+   data:
+    DEPLOYMENT_ENV: dev
+
+    
+    
+

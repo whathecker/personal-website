@@ -1,0 +1,19 @@
+{{- if .Values.configs }}
+{{- $namespace := .Values.namespace -}}
+{{- range $configs := .Values.configs }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+ name: {{ $configs.name }}
+ namespace: {{ $.Values.namespace }}
+  {{- template "default.labels" $ }}
+  {{- template "default.annotations" $ }}
+data: 
+ {{- range $key, $value := $configs.data }}
+ {{ $key }}: {{ $value }}
+ {{- end }}
+
+{{- end }}
+{{- end }}
+

@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+ name: {{ .Release.Name }}-ingress
+ namespace: {{ .Values.namespace }}
+ {{ template "default.labels" $ }}
+ {{ template "ingress.annotations" $ }}
+spec:
+  rules:
+    - http:
+        paths:
+          {{- if .Values.services }}
+          {{- range $service := .Values.services }}
+          - path: {{ $service.path }}
+            backend:
+              serviceName: {{ $service.name }}
+              servicePort: {{ $service.port }}
+          {{- end }}
+          {{- end }}
+            
