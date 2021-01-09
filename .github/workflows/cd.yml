@@ -92,8 +92,9 @@ jobs:
 
     - name: Deploy 
       run: |-
-        helm upgrade --install personal-website ./chart \
-          --values ./chart/values-prod.yaml
+        helm upgrade --install personal-website ./chart --values ./chart/values-prod.yaml --set imageTag=$GITHUB_SHA
+        kubectl rollout status deployment
+        kubectl get services -o wide
 
 
 

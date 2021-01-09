@@ -20,7 +20,7 @@ spec:
   spec:
    containers:
     - name: {{ $deployment.containerName }}
-      image: {{ $deployment.imagePath }}
+      image: {{ $deployment.imagePath }}:{{ $.Values.imageTag }}
       ports: 
        - containerPort: {{ $deployment.containerPort }}
       livenessProbe:
@@ -36,8 +36,10 @@ spec:
        - secretRef:
           name: {{ $deployment.secret.name }}
        {{- end}}
+   {{- if $.Values.localImageSecret }}
    imagePullSecrets:
-    - name: gcr-json-key
+    - name: {{ $.Values.localImageSecret }}
+   {{- end }}
 {{- end }}
 {{- end }}
 
