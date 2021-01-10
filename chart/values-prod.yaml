@@ -23,7 +23,7 @@ deployments:
     imagePath: eu.gcr.io/yunjae/frontend
     containerPort: 3000
     healthCheckPath: /
-    healthCheckInitialDelay: 40
+    healthCheckInitialDelay: 180
     healthCheckInterval: 30
   - name: backend-deployment
     replicas: 2
