@@ -1,5 +1,10 @@
 namespace: personal-website-prod
-
+certificate:
+  secretName: yunjae-prod
+  mainDomainName: yunjaeoh.com
+  dnsNames: 
+    - '*.yunjaeoh.com'
+    - yunjaeoh.com
 services:
   - name: frontend-cluster-ip-service
     path: /?(.*)
@@ -13,7 +18,6 @@ services:
     type: ClusterIP
     port: 9000
     targetPort: 9000
-
 imageTag: latest
 deployments:
   - name: frontend-deployment
@@ -36,7 +40,6 @@ deployments:
     healthCheckInterval: 15
     secret:
       name: contentful
-
 configs:
  - name: frontend-configmap
    data: 

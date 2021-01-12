@@ -1,6 +1,5 @@
 namespace: personal-website-local-cluster
 localImageSecret: gcr-json-key
-
 services:
   - name: frontend-cluster-ip-service
     path: /?(.*)
@@ -14,7 +13,6 @@ services:
     type: ClusterIP
     port: 9000
     targetPort: 9000
-
 imageTag: latest
 deployments:
   - name: frontend-deployment
@@ -37,7 +35,6 @@ deployments:
     healthCheckInterval: 15
     secret:
       name: contentful
-
 configs:
  - name: frontend-configmap
    data: 
