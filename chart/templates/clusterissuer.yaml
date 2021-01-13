@@ -8,12 +8,12 @@ metadata:
 {{- template "default.labels" $ }}
 spec:
  acme:
-  server: https://acme-v02.api.letsencrypt.org/directory
+  server: https://acme-staging-v02.api.letsencrypt.org/directory
   email: yunjae.oh.nl@gmail.com
   privateKeySecretRef:
    name: {{ $cert.secretName }}
   solvers:
-   - http01:
-      ingress:
-       class: nginx
+  - http01:
+     ingress:
+      class: nginx
 {{- end }}
