@@ -1,7 +1,7 @@
 namespace: personal-website-prod
 certificate:
-  privateKeySecretName: letsencrypt-staging-private-key
-  certificateName: personal-website-tls-secret
+  privateKeySecretName: letsencrypt-prod-private-key
+  certificateName: personal-website-prod-tls-secret
   mainDomainName: yunjaeoh.com
   dnsNames: 
     - yunjaeoh.com
