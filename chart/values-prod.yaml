@@ -3,8 +3,8 @@ certificate:
   secretName: yunjae-prod
   mainDomainName: yunjaeoh.com
   dnsNames: 
-    - '*.yunjaeoh.com'
     - yunjaeoh.com
+    - www.yunjaeoh.com
 services:
   - name: frontend-cluster-ip-service
     path: /?(.*)
