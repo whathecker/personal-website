@@ -16,7 +16,7 @@ spec:
   - hosts:
     - yunjaeoh.com
     - www.yunjaeoh.com
-    secretName: {{ $cert.secretName }}
+    secretName: {{ $cert.certificateName }}
   rules:
     - host: yunjaeoh.com
       http:

@@ -7,7 +7,7 @@ metadata:
  namespace: cert-manager
 {{- template "default.labels" $ }}
 spec:
- secretName: {{ $cert.secretName }}
+ secretName: {{ $cert.certificateName }}
  issuerRef:
   name: letsencrypt-prod
   kind: ClusterIssuer
