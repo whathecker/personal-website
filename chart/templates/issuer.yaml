@@ -11,7 +11,7 @@ spec:
   server: https://acme-staging-v02.api.letsencrypt.org/directory
   email: yunjae.oh.nl@gmail.com
   privateKeySecretRef:
-   name: {{ $cert.secretName }}
+   name: {{ $cert.privateKeySecretName }}
   solvers:
   - http01:
      ingress:
