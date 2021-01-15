@@ -23,10 +23,6 @@ exports[`Test Header component should renders correctly 1`] = `
             "title": "Reading list",
             "url": "/reading-list",
           },
-          Object {
-            "title": "Contact",
-            "url": "/contact",
-          },
         ]
       }
     />
@@ -40,10 +36,6 @@ exports[`Test Header component should renders correctly 1`] = `
           Object {
             "title": "Reading list",
             "url": "/reading-list",
-          },
-          Object {
-            "title": "Contact",
-            "url": "/contact",
           },
         ]
       }
