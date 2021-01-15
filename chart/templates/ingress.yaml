@@ -1,3 +1,49 @@
+{{- $cert := .Values.certificate -}}
+## only production values.yaml have certificate object
+
+{{- if $cert }}
+
+## prod-ingress
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+ name: {{ .Release.Name }}-ingress
+ namespace: {{ .Values.namespace }}
+ {{ template "default.labels" $ }}
+ {{ template "ingress-prod.annotations" $ }}
+spec:
+  tls:
+  - hosts:
+    - yunjaeoh.com
+    - www.yunjaeoh.com
+    secretName: {{ $cert.certificateName }}
+  rules:
+    - host: yunjaeoh.com
+      http:
+       paths:
+        {{- if .Values.services }}
+        {{- range $service := .Values.services }}
+        - path: {{ $service.path }}
+          backend:
+           serviceName: {{ $service.name }}
+           servicePort: {{ $service.port }}
+        {{- end }}
+        {{- end }}
+    - host: www.yunjaeoh.com
+      http:
+       paths:
+        {{- if .Values.services }}
+        {{- range $service := .Values.services }}
+        - path: {{ $service.path }}
+          backend:
+           serviceName: {{ $service.name }}
+           servicePort: {{ $service.port }}
+        {{- end }}
+        {{- end }}
+
+{{- else }}
+
+## non-prod ingress
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -8,13 +54,16 @@ metadata:
 spec:
   rules:
     - http:
-        paths:
-          {{- if .Values.services }}
-          {{- range $service := .Values.services }}
-          - path: {{ $service.path }}
-            backend:
-              serviceName: {{ $service.name }}
-              servicePort: {{ $service.port }}
-          {{- end }}
-          {{- end }}
+       paths:
+        {{- if .Values.services }}
+        {{- range $service := .Values.services }}
+        - path: {{ $service.path }}
+          backend:
+           serviceName: {{ $service.name }}
+           servicePort: {{ $service.port }}
+        {{- end }}
+        {{- end }}
+
+{{- end }}
+
             

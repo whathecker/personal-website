@@ -19,3 +19,15 @@
   kubernetes.io/ingress.class: nginx
   nginx.ingress.kubernetes.io/rewrite-target: /$1
 {{- end }}
+
+{{- define "ingress-prod.annotations" }}
+ annotations:
+  meta.helm.sh/release-name: {{ .Release.Name }}
+  meta.helm.sh/release-namespace: {{ .Values.namespace }}
+  kubernetes.io/ingress.class: nginx
+  nginx.ingress.kubernetes.io/rewrite-target: /$1
+  cert-manager.io/cluster-issuer: letsencrypt-prod
+  nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+{{- end }}
+
+ 

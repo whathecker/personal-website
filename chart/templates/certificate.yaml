@@ -1,0 +1,19 @@
+{{- if .Values.certificate }}
+{{- $cert := .Values.certificate -}}
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+ name: personal-website-tls
+ namespace: cert-manager
+{{- template "default.labels" $ }}
+spec:
+ secretName: {{ $cert.certificateName }}
+ issuerRef:
+  name: letsencrypt-prod
+  kind: ClusterIssuer
+ commonName: {{ $cert.mainDomainName }}
+ dnsNames:
+ {{- range $dnsName := $cert.dnsNames }}
+  - {{ $dnsName | squote }}
+ {{- end }}
+{{- end }}

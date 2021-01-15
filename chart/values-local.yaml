@@ -1,5 +1,5 @@
 namespace: personal-website-local-cluster
-
+localImageSecret: gcr-json-key
 services:
   - name: frontend-cluster-ip-service
     path: /?(.*)
@@ -13,13 +13,13 @@ services:
     type: ClusterIP
     port: 9000
     targetPort: 9000
-    
+imageTag: latest
 deployments:
   - name: frontend-deployment
     replicas: 2
     selectorValue: frontend
     containerName: frontend
-    imagePath: eu.gcr.io/yunjae/frontend:latest
+    imagePath: eu.gcr.io/yunjae/frontend
     containerPort: 3000
     healthCheckPath: /
     healthCheckInitialDelay: 40
@@ -28,14 +28,13 @@ deployments:
     replicas: 2
     selectorValue: backend
     containerName: backend
-    imagePath: eu.gcr.io/yunjae/backend:latest
+    imagePath: eu.gcr.io/yunjae/backend
     containerPort: 9000
     healthCheckPath: /health
     healthCheckInitialDelay: 10
     healthCheckInterval: 15
     secret:
       name: contentful
-
 configs:
  - name: frontend-configmap
    data: 
