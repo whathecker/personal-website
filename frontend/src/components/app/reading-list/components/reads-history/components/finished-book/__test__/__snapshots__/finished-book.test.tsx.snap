@@ -3,6 +3,7 @@
 exports[`Test FinishedBook component should renders correctly 1`] = `
 <styled__FinishedBookBackground>
   <styled__FinishedBookImg
+    alt="Domain-Driven Design: Tackling Complexity in the Heart of Software"
     src="https://images.ctfassets.net/9iq7dqw56i6q/36gMyk68F3OfW1K9iBDvZV/defc330e0ae1fd27933e82117c13b3bd/domain_driven_design.jpg"
   />
   <styled__FinishedBookDetailWrapper>
@@ -39,6 +40,7 @@ exports[`Test FinishedBook component should renders correctly 1`] = `
 exports[`Test FinishedBook component should renders correctly with only required fields 1`] = `
 <styled__FinishedBookBackground>
   <styled__FinishedBookImg
+    alt="Domain-Driven Design: Tackling Complexity in the Heart of Software"
     src="https://images.ctfassets.net/9iq7dqw56i6q/36gMyk68F3OfW1K9iBDvZV/defc330e0ae1fd27933e82117c13b3bd/domain_driven_design.jpg"
   />
   <styled__FinishedBookDetailWrapper>

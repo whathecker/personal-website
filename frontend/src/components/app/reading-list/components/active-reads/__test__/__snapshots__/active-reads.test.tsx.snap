@@ -10,6 +10,7 @@ exports[`Test ActiveReads component should renders correctly 1`] = `
     key="0"
   >
     <styled__BookImg
+      alt="Domain-Driven Design: Tackling Complexity in the Heart of Software"
       src="https://images.ctfassets.net/9iq7dqw56i6q/36gMyk68F3OfW1K9iBDvZV/defc330e0ae1fd27933e82117c13b3bd/domain_driven_design.jpg"
     />
     <styled__BookDetailWrapper>
@@ -26,6 +27,7 @@ exports[`Test ActiveReads component should renders correctly 1`] = `
     key="1"
   >
     <styled__BookImg
+      alt="Domain-Driven Design: Tackling Complexity in the Heart of Software"
       src="https://images.ctfassets.net/9iq7dqw56i6q/36gMyk68F3OfW1K9iBDvZV/defc330e0ae1fd27933e82117c13b3bd/domain_driven_design.jpg"
     />
     <styled__BookDetailWrapper>
