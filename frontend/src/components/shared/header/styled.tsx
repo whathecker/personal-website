@@ -15,9 +15,7 @@ export const StyledLogoWrapper = styled.div`
   height: 45px;
 `;
 
-export const StyledLogoLink = styled.a`
-
-`;
+export const StyledLogoLink = styled.a``;
 
 export const StyledLogoImg = styled.img`
   width: 100%;

@@ -8,5 +8,5 @@ export const StyledH1 = styled.h1`
 
 export const StyledBodyText = styled.p`
   font-size: 1em;
-  padding-top: 10px;
+  padding-top: 25px;
 `;

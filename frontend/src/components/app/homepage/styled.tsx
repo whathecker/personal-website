@@ -5,7 +5,7 @@ export const HomepageAreaBackground = styled.div`
   height: auto;
 
   @media ${device.laptop} {
-    height: 650px;
+    min-height: calc(100vh - 140px);
   } ;
 `;
 
@@ -21,10 +21,10 @@ export const HomepageIntroSectionWrapper = styled.div`
     display: inline-block;
     vertical-align: top;
     width: 30%;
-    height: 95%;
+    min-height: calc(83vh - 80px);
     margin-top: 20px;
     margin-right: 1%;
-    padding-top: 0px;
+    padding-top: 3%;
     padding-bottom: 0px;
     border-right: 0.5px solid grey;
     border-bottom: none;

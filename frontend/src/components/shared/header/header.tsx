@@ -30,7 +30,7 @@ const Header: React.FunctionComponent = () => {
   return (
     <StyledHeader>
       <StyledLogoWrapper>
-        <StyledLogoLink href="/" >
+        <StyledLogoLink href="/">
           <StyledLogoImg src="/img/logo.png" />
         </StyledLogoLink>
       </StyledLogoWrapper>
