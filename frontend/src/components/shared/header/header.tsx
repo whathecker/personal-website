@@ -13,10 +13,11 @@ const Header: React.FunctionComponent = () => {
       title: 'Reading list',
       url: '/reading-list',
     },
+    /*
     {
       title: 'Contact',
       url: '/contact',
-    },
+    }, */
   ];
 
   const renderDesktopMenus = () => {
