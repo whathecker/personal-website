@@ -26,12 +26,8 @@ function getBackendHostUrl(): string {
     hostUrl = `http://${minikubeIP}/api`;
   }
 
-  if (executionContext === 'development') {
-    hostUrl = 'add url here';
-  }
-
   if (executionContext === 'production') {
-    hostUrl = 'add url here';
+    hostUrl = 'https://www.yunjaeoh.com/api';
   }
 
   return hostUrl;
