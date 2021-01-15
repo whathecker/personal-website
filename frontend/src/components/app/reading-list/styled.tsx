@@ -4,8 +4,8 @@ import { device } from '../../../utils';
 export const ReadlingListHeaderSection = styled.div`
   width: 90%;
   margin: 0 auto;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 
   @media ${device.laptop} {
     padding-left: 55px;
@@ -19,8 +19,8 @@ export const ActiveReadsSection = styled.div`
 export const ActiveReadsInnerWrapper = styled.div`
   width: 90%;
   margin: 0 auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 20px;
 
   @media ${device.laptop} {
     padding-left: 55px;
@@ -30,7 +30,7 @@ export const ActiveReadsInnerWrapper = styled.div`
 export const ReadsHistorySection = styled.div`
   width: 90%;
   margin: 0 auto;
-  padding-top: 30px;
+  padding-top: 50px;
   padding-bottom: 30px;
 
   @media ${device.laptop} {

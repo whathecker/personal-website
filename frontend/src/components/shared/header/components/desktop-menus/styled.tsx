@@ -11,8 +11,8 @@ export const DesktopMenusWrapper = styled.div`
 
 export const StyledMenuItem = styled.a`
   cursor: pointer;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
   font-size: 1.1em;
   color: black;
   text-decoration: none;

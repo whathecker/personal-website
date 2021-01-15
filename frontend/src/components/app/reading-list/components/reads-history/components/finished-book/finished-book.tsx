@@ -45,7 +45,7 @@ const FinishedBook: React.FunctionComponent<FinishedBookProps> = (props: Finishe
 
   return (
     <FinishedBookBackground>
-      <FinishedBookImg src={`https:${book.coverImage}`} />
+      <FinishedBookImg alt={book.title} src={`https:${book.coverImage}`} />
       <FinishedBookDetailWrapper>
         <BookTitle>{book.title}</BookTitle>
         <AuthorInfo>{`by ${book.author}`}</AuthorInfo>

@@ -9,7 +9,7 @@ export const IntroImageWrapper = styled.div`
   padding-bottom: 30px;
 
   @media ${device.laptop} {
-    padding-top: 55px;
+    padding-top: 40px;
   } ;
 `;
 

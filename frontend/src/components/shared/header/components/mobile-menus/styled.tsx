@@ -30,11 +30,11 @@ export const MobileMenuIcon = styled.img`
 
 export const StyledMobileMenuItem = styled.a`
   cursor: pointer;
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: black;
   text-decoration: none;
   margin-left: 30px;
-  padding-top: 15px;
+  padding-top: 25px;
   padding-bottom: 10px;
   &:first-of-type {
     margin-top: 50px;

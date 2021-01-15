@@ -25,8 +25,8 @@ export const FinishedBookDetailWrapper = styled.div`
   margin: 0 auto;
   padding-top: 8px;
 
-  @media ${device.tablet} {
-    width: 500px;
+  @media ${device.mobileL} {
+    width: 390px;
   }
 
   @media ${device.laptop} {

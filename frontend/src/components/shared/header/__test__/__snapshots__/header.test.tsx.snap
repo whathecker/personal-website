@@ -3,7 +3,13 @@
 exports[`Test Header component should renders correctly 1`] = `
 <styled__StyledHeader>
   <styled__StyledLogoWrapper>
-    Add Logo
+    <styled__StyledLogoLink
+      href="/"
+    >
+      <styled__StyledLogoImg
+        src="/img/logo.png"
+      />
+    </styled__StyledLogoLink>
   </styled__StyledLogoWrapper>
   <styled__StyledMenuWrapper>
     <DesktopMenus
@@ -16,10 +22,6 @@ exports[`Test Header component should renders correctly 1`] = `
           Object {
             "title": "Reading list",
             "url": "/reading-list",
-          },
-          Object {
-            "title": "Contact",
-            "url": "/contact",
           },
         ]
       }
@@ -34,10 +36,6 @@ exports[`Test Header component should renders correctly 1`] = `
           Object {
             "title": "Reading list",
             "url": "/reading-list",
-          },
-          Object {
-            "title": "Contact",
-            "url": "/contact",
           },
         ]
       }
