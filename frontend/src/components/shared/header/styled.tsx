@@ -11,9 +11,16 @@ export const StyledHeader = styled.header`
 `;
 
 export const StyledLogoWrapper = styled.div`
-  width: 250px;
-  height: 60px;
-  border: 1px solid black;
+  width: 200px;
+  height: 45px;
+`;
+
+export const StyledLogoLink = styled.a`
+
+`;
+
+export const StyledLogoImg = styled.img`
+  width: 100%;
 `;
 
 export const StyledMenuWrapper = styled.div`

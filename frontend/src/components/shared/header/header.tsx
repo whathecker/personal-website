@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyledHeader, StyledLogoWrapper, StyledMenuWrapper } from './styled';
+import { StyledHeader, StyledLogoWrapper, StyledLogoLink, StyledLogoImg, StyledMenuWrapper } from './styled';
 import { DesktopMenus, MobileMenus } from './components';
 import { MenuItem } from './types';
 
@@ -29,7 +29,11 @@ const Header: React.FunctionComponent = () => {
 
   return (
     <StyledHeader>
-      <StyledLogoWrapper>Add Logo</StyledLogoWrapper>
+      <StyledLogoWrapper>
+        <StyledLogoLink href="/" >
+          <StyledLogoImg src="/img/logo.png" />
+        </StyledLogoLink>
+      </StyledLogoWrapper>
       <StyledMenuWrapper>
         {renderDesktopMenus()}
         {renderMobileMenus()}
