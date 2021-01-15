@@ -13,7 +13,7 @@ const ActiveReads: React.FunctionComponent<ActiveReadsProps> = (props: ActiveRea
     return books.map((book: ActivelyReadingBook, index: number) => {
       return (
         <ActiveBookWrapper className="active-book" key={index}>
-          <BookImg src={`https:${book.coverImage}`} />
+          <BookImg alt={book.title} src={`https:${book.coverImage}`} />
           <BookDetailWrapper>
             <BookTitle>{book.title}</BookTitle>
             <AuthorInfo>{`by ${book.author}`}</AuthorInfo>
