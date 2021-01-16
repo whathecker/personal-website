@@ -8,7 +8,7 @@ const Intro: React.FunctionComponent = () => {
         <IntroImage src="/img/profile.jpg" />
       </IntroImageWrapper>
       <IntroHeaderText>{`Product Manager & Programmer`}</IntroHeaderText>
-      <IntroBodyText>{`Product manager during the day, software enginner in the evening`}</IntroBodyText>
+      <IntroBodyText>{`Product manager during the day, a programmer in the evening`}</IntroBodyText>
     </>
   );
 };

@@ -28,7 +28,7 @@ const CurrentlyReading: React.FunctionComponent<CurrentlyReadingProps> = (props:
     <CurrentlyReadingSection>
       <HeaderWrapper>
         <CurrentlyReadingHeader>{`Currently Reading`}</CurrentlyReadingHeader>
-        <CurrentlyReadingLink href="/reading-list">{`checkout my reading list`}</CurrentlyReadingLink>
+        <CurrentlyReadingLink href="/reading-list">{`check my reading list`}</CurrentlyReadingLink>
       </HeaderWrapper>
       <BookWrapper>
         <BookImgWrapper>
