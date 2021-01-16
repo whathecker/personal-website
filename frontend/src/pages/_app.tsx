@@ -53,10 +53,9 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 class MyApp extends App {
-
-  componentDidMount () {
+  componentDidMount() {
     TagManager.initialize({ gtmId: 'GTM-PDX43JZ' });
-  };
+  }
 
   render() {
     const { Component, pageProps } = this.props;
