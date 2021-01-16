@@ -4,7 +4,7 @@ import App from 'next/app';
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 import { GlobalContextProvider } from '../contexts/global-context';
-
+import TagManager from 'react-gtm-module';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -53,6 +53,10 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 class MyApp extends App {
+  componentDidMount() {
+    TagManager.initialize({ gtmId: 'GTM-PDX43JZ' });
+  }
+
   render() {
     const { Component, pageProps } = this.props;
 

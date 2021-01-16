@@ -20,7 +20,7 @@ const ReadingList: React.FunctionComponent = () => {
       <ReadlingListHeaderSection>
         <ReadingListHeader
           headerText="Reading List"
-          bodyText="I love to read about various of topics. here are some selection of books which I’d like to share my rating and reviews"
+          bodyText="This list is a selection of books that I'd like to share my rating and review"
         />
       </ReadlingListHeaderSection>
       <ActiveReadsSection>

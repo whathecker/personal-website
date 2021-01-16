@@ -4,6 +4,7 @@ import { HomepageArea } from '../components/app/homepage';
 import { booksApiHelper } from '../api/api-helpers';
 import { ListBooksQuery, Book } from '../api/types/books';
 import { GlobalContext } from '../contexts/global-context';
+import { MetaHeader } from '../components/shared';
 
 type ObjType = Record<string, unknown>;
 
@@ -29,8 +30,15 @@ class Homepage extends React.Component<ObjType, ObjType> {
   }
 
   render(): React.ReactNode {
+    const seo = {
+      pageTitle: 'Welcome to my website | yunjaeoh.com',
+      metaDescription: ' ',
+      indexStatus: true,
+      urlPath: 'https://www.yunjaeoh.com',
+    };
     return (
       <>
+        <MetaHeader {...seo} />
         <Header />
         <HomepageArea />
         <Footer />

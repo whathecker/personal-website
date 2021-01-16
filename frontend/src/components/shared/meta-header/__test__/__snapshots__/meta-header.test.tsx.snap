@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Header component should renders MetaHeader 1`] = `
+<Fragment>
+  <Head>
+    <meta
+      charSet="utf-8"
+    />
+    <meta
+      content="IE=edge, chrome=1"
+      httpEquiv="X-UA-Compatible"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
+      rel="stylesheet"
+    />
+    <title>
+      This is my homepage
+    </title>
+    <meta
+      content="Welcome to my website"
+      name="description"
+    />
+    <meta
+      content="index follow"
+      name="robots"
+    />
+    <meta
+      content="https://www.yunjaeoh.com"
+      property="og:url"
+    />
+    <meta
+      content="website"
+      property="og:type"
+    />
+    <meta
+      content="This is my homepage"
+      property="og:title"
+    />
+    <meta
+      content="Welcome to my website"
+      property="og:description"
+    />
+    <meta
+      content=""
+      property="og:image"
+    />
+  </Head>
+</Fragment>
+`;

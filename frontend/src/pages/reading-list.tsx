@@ -4,6 +4,7 @@ import { ReadingList } from '../components/app/reading-list';
 import { booksApiHelper } from '../api/api-helpers';
 import { ListBooksQuery, Book } from '../api/types/books';
 import { GlobalContext } from '../contexts/global-context';
+import { MetaHeader } from '../components/shared';
 
 type ObjType = Record<string, unknown>;
 
@@ -35,8 +36,15 @@ class ReadingListPage extends React.Component<ObjType, ObjType> {
   }
 
   render(): React.ReactNode {
+    const seo = {
+      pageTitle: 'Check my reading list | yunjaeoh.com',
+      metaDescription: ' ',
+      indexStatus: true,
+      urlPath: 'https://www.yunjaeoh.com/reading-list',
+    };
     return (
       <>
+        <MetaHeader {...seo} />
         <Header />
         <ReadingList />
         <Footer />

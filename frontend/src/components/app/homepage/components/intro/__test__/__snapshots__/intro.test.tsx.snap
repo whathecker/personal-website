@@ -11,7 +11,7 @@ exports[`Test Intro component should renders correctly 1`] = `
     Product Manager & Programmer
   </styled__IntroHeaderText>
   <styled__IntroBodyText>
-    Product manager during the day, software enginner in the evening
+    Product manager during the day, a programmer in the evening
   </styled__IntroBodyText>
 </Fragment>
 `;
