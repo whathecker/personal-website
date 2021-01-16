@@ -16,7 +16,7 @@ export const StyledLogoWrapper = styled.div`
 
   @media ${device.laptop} {
     padding-left: 6%;
-  };
+  } ;
 `;
 
 export const StyledLogoLink = styled.a``;
@@ -36,5 +36,5 @@ export const StyledMenuWrapper = styled.div`
 
   @media ${device.laptop} {
     margin-right: 50px;
-  };
+  } ;
 `;
