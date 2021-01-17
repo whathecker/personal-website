@@ -4,7 +4,7 @@
 
 
 ##  Project Structure
-  The project consists of two containerized applications: [frontend](insert link), [backend](insert link)
+  The project consists of two containerized applications: [frontend](./frontend/README.md), [backend](insert link)
 
 ## Run the Project Locally 
 
