@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "compile": "rm -rf build/ && tsc -p .",
+    "post-compile": "cp -rv src/frameworks/web/swagger build/frameworks/web/swagger",
+    "build": "npm run compile && npm run post-compile",
     "dev": "nodemon src/frameworks/web/index.ts",
-    "start": "npm run compile && node build/frameworks/web/index.js",
+    "start": "npm run build && node build/frameworks/web/index.js",
     "test": "jest --detectOpenHandles --forceExit",
     "test:unit": "jest '(unit).(test)' --detectOpenHandles",
     "test:int": "jest '(int).(test)' --detectOpenHandles --forceExit",
