@@ -1,30 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Overview
+This project is a application that powers user interface of [my website](https://www.yunjaeoh.com).
 
-## Getting Started
+## Stack overview
+- Server side rendered React app which uses [NextJS](https://nextjs.org/)
+- Written in [TypeScript](https://github.com/microsoft/TypeScript)
+- Written in [TypeScript](https://github.com/microsoft/TypeScript)
+- Uses [styled-component](https://github.com/styled-components) for styling 
+- [material-ui](https://github.com/mui-org/material-ui) is used in combination with regular components
+- [Husky](https://www.npmjs.com/package/husky) is used to ensure [eslint](https://github.com/eslint/eslint) and [commitlint](https://www.npmjs.com/package/@commitlint/cli) is run before each commit
+- Uses [conventional commit](https://www.npmjs.com/package/@commitlint/config-conventional) for commit lint rule
+- Uses [jest](https://jestjs.io/en/) and [enzyme](https://enzymejs.github.io/enzyme/) for test
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Run Project Locally
+1. `git clone {this repo}`
+2. `npm install or yarn`
+3. `npm run dev (or npm run start if you want to create production optimized build`
+4. `visit localhost:3000`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Environment Variables
 
-## Learn More
+| Key                    | Value                                  | Note                                  |
+| -----------------------|:---------------------------------------| :-------------------------------------|
+| NEXT_PUBLIC_EXE_CTX    | String indicates execution enviornment | Required                              |
+| NEXT_PUBLIC_MINIKUBE_IP| IP address of minikube cluster         | Required when running app in minikube |
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
