@@ -30,7 +30,7 @@ server.get('/health', async (_req: Request, res: Response) => {
 
 server.use('/books/*', bodyParser.json(), bodyParserErrHandler);
 
-const swaggerData = YAML.load(process.cwd() + '/src/frameworks/web/swagger/swagger-definition.yaml');
+const swaggerData = YAML.load(process.cwd() + '/build/frameworks/web/swagger/swagger-definition.yaml');
 server.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerData));
 
 server.use(apiRoutes);
