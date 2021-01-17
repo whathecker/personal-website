@@ -17,3 +17,12 @@ This project is a application that powers user interface of [my website](https:/
 2. `npm install or yarn`
 3. `npm run dev (or npm run start if you want to create production optimized build`
 4. `visit localhost:3000`
+
+
+## Environment Variables
+
+| Key                    | Value                                  | Note                                  |
+| -----------------------|:---------------------------------------| :-------------------------------------|
+| NEXT_PUBLIC_EXE_CTX    | String indicates execution enviornment | Required                              |
+| NEXT_PUBLIC_MINIKUBE_IP| IP address of minikube cluster         | Required when running app in minikube |
+
