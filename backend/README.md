@@ -1,5 +1,5 @@
 # Project Overview
-This project is an application that provides an abstraction for [my website](https://www.yunjaeoh.com) to fetch data to power the reading-list.
+This project is an application that provides an abstraction for [my website](https://www.yunjaeoh.com) to fetch data for the reading-list.
 
 ## Stack overview
 - Written in [TypeScript](https://github.com/microsoft/TypeScript)
