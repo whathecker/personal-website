@@ -6,7 +6,7 @@
 ##  Project Structure
   The project consists of two containerized applications: [frontend](insert link), [backend](insert link)
 
-### Run the Project Locally 
+## Run the Project Locally 
 
 #### With minikube (recommended)
 
