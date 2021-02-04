@@ -32,11 +32,23 @@ class GlobalContextProvider extends React.Component<ObjType, IGlobalContext> {
   }
 
   loadFinishedBooks(books: Books): void {
-    this.setState({ finishedReadingBooks: books });
+    this.setState({ finishedReadingBooks: this.sortFinishedBooksByFinishedDate(books) });
   }
 
   render(): React.ReactNode {
     return <GlobalContext.Provider value={this.state}>{this.props.children}</GlobalContext.Provider>;
+  }
+
+  private sortFinishedBooksByFinishedDate(books: Books): Books {
+    return books.sort((a: Book, b: Book) => {
+      if (a.readDate > b.readDate) {
+        return -1;
+      }
+      if (a.readDate < b.readDate) {
+        return 1;
+      }
+      return 0;
+    });
   }
 }
 
