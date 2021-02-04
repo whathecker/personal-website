@@ -40,7 +40,7 @@ class GlobalContextProvider extends React.Component<ObjType, IGlobalContext> {
   }
 
   private sortFinishedBooksByFinishedDate(books: Books): Books {
-    return books.sort((a: Book , b: Book) => {
+    return books.sort((a: Book, b: Book) => {
       if (a.readDate > b.readDate) {
         return -1;
       }
