@@ -1,6 +1,6 @@
 # Personal Website
   This repository contains the source code of my [personal website](https://www.yunjaeoh.com) 
-(Update: I shut it down cause Managed K8s cluster is too costly for this website.)
+(Update: Site is no longer live cause the GCP managed K8s cluster is too costly)
 
 
 
